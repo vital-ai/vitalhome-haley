@@ -1,0 +1,739 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://vital.ai/ontology/haley-project#"
+     xml:base="http://vital.ai/ontology/haley-project"
+     xmlns:vital-core="http://vital.ai/ontology/vital-core#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vital-aimp="http://vital.ai/ontology/vital-aimp#">
+    <owl:Ontology rdf:about="http://vital.ai/ontology/haley-project">
+        <owl:imports rdf:resource="http://vital.ai/ontology/vital"/>
+        <owl:imports rdf:resource="http://vital.ai/ontology/haley"/>
+        <vital-core:hasDefaultGroupId>haley-ai</vital-core:hasDefaultGroupId>
+        <owl:versionInfo>0.1.0</owl:versionInfo>
+        <vital-core:hasDefaultPackage>ai.haley.project.domain</vital-core:hasDefaultPackage>
+        <vital-core:hasDefaultArtifactId>haley-project</vital-core:hasDefaultArtifactId>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasAuthorLoginURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-project#hasAuthorLoginURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskDiscussionComment"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital#Login"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasAuthorParticipantURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-project#hasAuthorParticipantURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskDiscussionComment"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-project#ProjectParticipant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasCurrentStatus -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-project#hasCurrentStatus">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTask"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskStatusType"/>
+        <vital-aimp:hasCommonName>status</vital-aimp:hasCommonName>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasParticipantLoginURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-project#hasParticipantLoginURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#ProjectParticipant"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital#Login"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasProjectTaskURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-project#hasProjectTaskURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskDiscussionElement"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-project#ProjectTask"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasStatus -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-project#hasStatus">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskStatus"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskStatusType"/>
+        <vital-aimp:hasCommonName>status</vital-aimp:hasCommonName>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasActualHourEffort -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasActualHourEffort">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasAssignmentEnd -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasAssignmentEnd">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#Edge_hasAssignedTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <vital-aimp:hasCommonName>end date</vital-aimp:hasCommonName>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasAssignmentStart -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasAssignmentStart">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#Edge_hasAssignedTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <vital-aimp:hasCommonName>start date</vital-aimp:hasCommonName>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasBudget -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasBudget">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-project#MasterProject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-project#ProjectTask"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Project"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <vital-aimp:hasCommonName>budget</vital-aimp:hasCommonName>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasBudgetExpended -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasBudgetExpended">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-project#MasterProject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-project#ProjectTask"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Project"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <vital-aimp:hasCommonName>budget expended</vital-aimp:hasCommonName>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasEarliestStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasEarliestStartDate">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskConstraint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasEstimatedHourEffort -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasEstimatedHourEffort">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasEventDate -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasEventDate">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#ProjectEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasLatestStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasLatestStartDate">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskConstraint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasMatchScore -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasMatchScore">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#Edge_hasSkillMatch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasPercentComplete -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasPercentComplete">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-project#MasterProject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-project#ProjectTask"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-project#ProjectTaskStatus"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Project"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <vital-aimp:hasCommonName>complete</vital-aimp:hasCommonName>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasProjectDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasProjectDescription">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-project#MasterProject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-project#Project"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasProjectIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasProjectIdentifier">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-project#MasterProject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-project#Project"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-project#ProjectManager"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-project#ProjectResource"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-project#ProjectSkill"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#ProjectTask"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasRequirementDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasRequirementDescription">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#ProjectResourceRequirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasSkillDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasSkillDescription">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#ProjectSkill"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#hasTaskDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#hasTaskDescription">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#isActiveOnTask -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#isActiveOnTask">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#Edge_hasAssignedTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <vital-aimp:hasCommonName>active</vital-aimp:hasCommonName>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#isTerminalTask -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-project#isTerminalTask">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>this property is true for tasks that are not divided into subtasks</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasAssignedTask -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasAssignedTask">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-aimp:hasCommonName>assigned</vital-aimp:hasCommonName>
+        <vital-aimp:hasVariationName>assignment</vital-aimp:hasVariationName>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTask"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasManagementOf -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasManagementOf">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-aimp:hasCommonName>manages</vital-aimp:hasCommonName>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#MasterProject"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#Project"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectManager"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasProject -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasProject">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#Project"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#MasterProject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasProjectDiscussionComment -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasProjectDiscussionComment">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskDiscussionComment"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskDiscussionElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasProjectEvent -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasProjectEvent">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectEvent"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#MasterProject"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#Project"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasProjectRequestRecipient -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasProjectRequestRecipient">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectParticipant"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectRequest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasProjectRequestSender -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasProjectRequestSender">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectParticipant"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectRequest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasProjectSubTask -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasProjectSubTask">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-aimp:hasCommonName>task</vital-aimp:hasCommonName>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTask"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasProjectTask -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasProjectTask">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-aimp:hasCommonName>task</vital-aimp:hasCommonName>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTask"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#Project"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskStatusRequest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasProjectTaskConstraint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasProjectTaskConstraint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskConstraint"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasProjectTaskStatus -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasProjectTaskStatus">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-aimp:hasCommonName>status</vital-aimp:hasCommonName>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskStatus"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasReportedTaskStatus -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasReportedTaskStatus">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-aimp:hasCommonName>status</vital-aimp:hasCommonName>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskStatus"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasResource -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasResource">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectResource"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectResourceRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasResourceRequirement -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasResourceRequirement">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-aimp:hasCommonName>requirement</vital-aimp:hasCommonName>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectResourceRequirement"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#MasterProject"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#Project"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasSkill -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasSkill">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-aimp:hasCommonName>skill</vital-aimp:hasCommonName>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectSkill"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectResource"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectResourceRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Edge_hasSkillMatch -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Edge_hasSkillMatch">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectSkill"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-project#ProjectSkill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#MasterProject -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#MasterProject">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+        <vital-aimp:hasCommonName>master project</vital-aimp:hasCommonName>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#Project -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#Project">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+        <vital-aimp:hasCommonName>project</vital-aimp:hasCommonName>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectEvent -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#ProjectEvent">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+        <vital-aimp:hasCommonName>event</vital-aimp:hasCommonName>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectManager -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#ProjectManager">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-project#ProjectParticipant"/>
+        <vital-aimp:hasCommonName>project manager</vital-aimp:hasCommonName>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectParticipant -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#ProjectParticipant">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectRequest -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#ProjectRequest">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+        <vital-aimp:hasCommonName>request</vital-aimp:hasCommonName>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectRequestStateType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#ProjectRequestStateType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectResource -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#ProjectResource">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-project#ProjectParticipant"/>
+        <vital-aimp:hasCommonName>resource</vital-aimp:hasCommonName>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectResourceRequirement -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#ProjectResourceRequirement">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+        <vital-aimp:hasCommonName>requirement</vital-aimp:hasCommonName>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectSkill -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#ProjectSkill">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+        <vital-aimp:hasCommonName>skill</vital-aimp:hasCommonName>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectTask -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#ProjectTask">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+        <vital-aimp:hasCommonName>task</vital-aimp:hasCommonName>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectTaskConstraint -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#ProjectTaskConstraint">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectTaskDiscussionComment -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#ProjectTaskDiscussionComment">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-aimp#Comment"/>
+        <vital-aimp:hasCommonName>comment</vital-aimp:hasCommonName>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectTaskDiscussionElement -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#ProjectTaskDiscussionElement">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectTaskStatus -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#ProjectTaskStatus">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+        <vital-aimp:hasCommonName>status</vital-aimp:hasCommonName>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectTaskStatusRequest -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#ProjectTaskStatusRequest">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-project#ProjectRequest"/>
+        <vital-aimp:hasCommonName>status request</vital-aimp:hasCommonName>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectTaskStatusType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-project#ProjectTaskStatusType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectRequestState_CANCELED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-project#ProjectRequestState_CANCELED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-project#ProjectRequestStateType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectRequestState_COMPLETED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-project#ProjectRequestState_COMPLETED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-project#ProjectRequestStateType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectRequestState_PENDING -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-project#ProjectRequestState_PENDING">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-project#ProjectRequestStateType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectTaskStatus_CANCELED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-project#ProjectTaskStatus_CANCELED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectTaskStatus_COMPLETED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-project#ProjectTaskStatus_COMPLETED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectTaskStatus_HALTED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-project#ProjectTaskStatus_HALTED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectTaskStatus_INPROCESS -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-project#ProjectTaskStatus_INPROCESS">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectTaskStatus_PENDING -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-project#ProjectTaskStatus_PENDING">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectTaskStatus_PLANNING -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-project#ProjectTaskStatus_PLANNING">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskStatusType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-project#ProjectTaskStatus_SCHEDULED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-project#ProjectTaskStatus_SCHEDULED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-project#ProjectTaskStatusType"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

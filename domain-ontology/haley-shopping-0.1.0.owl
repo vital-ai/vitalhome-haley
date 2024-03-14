@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY vital-nlp "http://vital.ai/ontology/vital-nlp#" >
+    <!ENTITY vital-core "http://vital.ai/ontology/vital-core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://vital.ai/ontology/haley-shopping#"
+     xml:base="http://vital.ai/ontology/haley-shopping"
+     xmlns:vital-core="http://vital.ai/ontology/vital-core#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:vital-nlp="http://vital.ai/ontology/vital-nlp#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://vital.ai/ontology/haley-shopping">
+        <vital-core:hasDefaultGroupId>haley-ai</vital-core:hasDefaultGroupId>
+        <vital-core:hasDefaultArtifactId>haley-shopping</vital-core:hasDefaultArtifactId>
+        <vital-core:hasDefaultPackage>ai.haley.shopping.domain</vital-core:hasDefaultPackage>
+        <owl:versionInfo>0.1.0</owl:versionInfo>
+        <owl:imports rdf:resource="http://vital.ai/ontology/vital"/>
+        <owl:imports rdf:resource="http://vital.ai/ontology/vital-nlp"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#hasAsin -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-shopping#hasAsin">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-shopping#AmazonItem"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#hasAverageRating -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-shopping#hasAverageRating">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-shopping#ProductItem"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-shopping#hasDescription">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-shopping#ProductItem"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#hasLargeImageURL -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-shopping#hasLargeImageURL">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-shopping#ProductItem"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#hasMediumImageURL -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-shopping#hasMediumImageURL">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-shopping#ProductItem"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#hasPriceAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-shopping#hasPriceAmount">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-shopping#ProductItem"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#hasPriceCurrencyCode -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-shopping#hasPriceCurrencyCode">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-shopping#ProductItem"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#hasPriceFormatted -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-shopping#hasPriceFormatted">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-shopping#ProductItem"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#hasRatingsCount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-shopping#hasRatingsCount">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-shopping#ProductItem"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#hasSmallImageURL -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-shopping#hasSmallImageURL">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-shopping#ProductItem"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-nlp#hasUrl -->
+
+    <rdf:Description rdf:about="&vital-nlp;hasUrl">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-shopping#ProductItem"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonActor -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonActor">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-shopping#AmazonEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonArtist -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonArtist">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-shopping#AmazonEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonAuthor -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonAuthor">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-shopping#AmazonEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonBrand -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonBrand">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonBrowseNode -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonBrowseNode">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonCreator -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonCreator">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-shopping#AmazonEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonCustomerReview -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonCustomerReview">
+        <rdfs:subClassOf rdf:resource="&vital-nlp;Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonDirector -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonDirector">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-shopping#AmazonEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonEditorialReview -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonEditorialReview">
+        <rdfs:subClassOf rdf:resource="&vital-nlp;Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonEntity -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonEntity">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonItem -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonItem">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-shopping#ProductItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonManufacturer -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonManufacturer">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-shopping#AmazonEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonNewRelease -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonNewRelease">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-shopping#AmazonItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonOffer -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonOffer">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonReviewSummary -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonReviewSummary">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonSearchIndex -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonSearchIndex">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonShoppingCart -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonShoppingCart">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonShoppingCartItem -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonShoppingCartItem">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonTopSeller -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonTopSeller">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-shopping#AmazonItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonVariation -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonVariation">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-shopping#ProductVariation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#AmazonVariationDimension -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#AmazonVariationDimension">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#ProductItem -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#ProductItem">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-shopping#ProductVariation -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-shopping#ProductVariation">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

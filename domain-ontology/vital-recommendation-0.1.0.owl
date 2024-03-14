@@ -1,0 +1,327 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY vital-core "http://vital.ai/ontology/vital-core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://vital.ai/ontology/vital-recommendation#"
+     xml:base="http://vital.ai/ontology/vital-recommendation"
+     xmlns:vital-core="http://vital.ai/ontology/vital-core#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://vital.ai/ontology/vital-recommendation">
+        <vital-core:hasDefaultGroupId rdf:datatype="&xsd;string">vital-ai</vital-core:hasDefaultGroupId>
+        <vital-core:hasDefaultArtifactId rdf:datatype="&xsd;string">vital-recommendation</vital-core:hasDefaultArtifactId>
+        <owl:versionInfo>0.1.0</owl:versionInfo>
+        <vital-core:hasDefaultPackage>com.vitalai.recommendation.domain</vital-core:hasDefaultPackage>
+        <owl:imports rdf:resource="http://vital.ai/ontology/vital"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#hasDimensionIRI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-recommendation#hasDimensionIRI">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-recommendation#DimensionPart"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-recommendation#DimensionScore"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#hasPropertyIRI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-recommendation#hasPropertyIRI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-recommendation#PropertyDimension"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&owl;topDataProperty"/>
+                <owl:someValuesFrom rdf:resource="&xsd;anyURI"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#hasDimensionName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-recommendation#hasDimensionName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-recommendation#DimensionPart"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#hasDimensionScore -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-recommendation#hasDimensionScore">
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-recommendation#DimensionPart"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-recommendation#DimensionScore"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#hasDimensionWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-recommendation#hasDimensionWeight">
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-recommendation#Dimension"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-recommendation#DimensionPart"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#hasMatchType -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-recommendation#hasMatchType">
+        <rdfs:comment>minimize, maximize, match</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-recommendation#Dimension"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#hasMatchTypeFunction -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-recommendation#hasMatchTypeFunction">
+        <rdfs:comment>linear or quadratic</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-recommendation#Dimension"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#hasRecommendationScore -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-recommendation#hasRecommendationScore">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-recommendation#Recommendation"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#hasSourceDoubleValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-recommendation#hasSourceDoubleValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-recommendation#DimensionPart"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#hasSourceIntegerValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-recommendation#hasSourceIntegerValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-recommendation#DimensionPart"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#hasSourceStringValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-recommendation#hasSourceStringValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-recommendation#DimensionPart"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#hasTotalScore -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-recommendation#hasTotalScore">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-recommendation#Edge_hasRecommendation"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#isArchetype -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-recommendation#isArchetype">
+        <rdfs:domain rdf:resource="&vital-core;VITAL_Node"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#Dimension -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-recommendation#Dimension">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#DimensionPart -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-recommendation#DimensionPart">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_HyperNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#DimensionScore -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-recommendation#DimensionScore">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#Edge_hasDimension -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-recommendation#Edge_hasDimension">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_PeerEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="&vital-core;VITAL_Node"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-recommendation#Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#Edge_hasDimensionScore -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-recommendation#Edge_hasDimensionScore">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-recommendation#DimensionScore"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-recommendation#Recommendation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#Edge_hasRecommendation -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-recommendation#Edge_hasRecommendation">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_PeerEdge"/>
+        <rdfs:comment xml:lang="en">generic edge that links source node with node being matched with</rdfs:comment>
+        <vital-core:hasEdgeDestDomain rdf:resource="&vital-core;VITAL_Node"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#Edge_hasRecommendationPart -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-recommendation#Edge_hasRecommendationPart">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-recommendation#Recommendation"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-recommendation#RecommendationPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#Edge_hasRecommendedItem -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-recommendation#Edge_hasRecommendedItem">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="&vital-core;VITAL_Node"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-recommendation#Recommendation"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-recommendation#RecommendedItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#HyperEdge_hasDimensionPart -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-recommendation#HyperEdge_hasDimensionPart">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_HyperEdge"/>
+        <vital-core:hasHyperEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-recommendation#DimensionPart"/>
+        <vital-core:hasHyperEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-recommendation#Edge_hasRecommendation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#PropertyDimension -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-recommendation#PropertyDimension">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-recommendation#Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#Recommendation -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-recommendation#Recommendation">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#RecommendationPart -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-recommendation#RecommendationPart">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-recommendation#RecommendedItem -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-recommendation#RecommendedItem">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
