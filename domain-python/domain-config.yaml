@@ -1,0 +1,11 @@
+domains:
+   - domain: "haley-python"
+     ontology: "haley-0.1.0.owl"
+   - domain: "haley-ai-kg-python"
+     ontology: "haley-ai-kg-0.1.0.owl"
+   - domain: "haley-ai-ml-python"
+     ontology: "haley-ai-ml-0.1.0.owl"
+   - domain: "haley-ai-question-python"
+     ontology: "haley-ai-question-0.1.0.owl"
+   - domain: "haley-taxonomy-python"
+     ontology: "haley-taxonomy-0.1.0.owl"
