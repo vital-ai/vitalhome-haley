@@ -21,3 +21,8 @@ class NewsCategory(TaxonomyNode):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + NewsCategory._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley-ai-kg#NewsCategory'
+
+

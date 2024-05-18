@@ -14,6 +14,7 @@ class KGDocument(KGNode):
         kGDocumentPublicationDateTime: datetime
         kGDocumentRetrievalDateTime: datetime
         kGDocumentSegmentIndex: int
+        kGDocumentSegmentMethodURI: str
         kGDocumentSegmentTokenLength: int
         kGDocumentSegmentTypeURI: str
         kGDocumentStartTokenIndex: int
@@ -23,4 +24,5 @@ class KGDocument(KGNode):
         kGDocumentURL: str
         kGEncodedByteData: str
         primaryLanguageType: str
+        topCategoryURIs: str
 

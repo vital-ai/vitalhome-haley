@@ -15,9 +15,14 @@ from ai_haley_kg_domain.model.KGType import KGType
 
 class KGFrameType(KGType):
     _allowed_properties = [
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGFrameTypeExternIdentifier', 'prop_class': StringProperty}, 
     ]
 
     @classmethod
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + KGFrameType._allowed_properties
+
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley-ai-kg#KGFrameType'
 

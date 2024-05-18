@@ -15,9 +15,19 @@ from ai_haley_kg_domain.model.Edge_hasKGEdge import Edge_hasKGEdge
 
 class Edge_hasKGExtraction(Edge_hasKGEdge):
     _allowed_properties = [
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGEndByteIndex', 'prop_class': IntegerProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGEndTokenIndex', 'prop_class': IntegerProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGExtractTaskURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGStartByteIndex', 'prop_class': IntegerProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGStartTokenIndex', 'prop_class': IntegerProperty}, 
     ]
 
     @classmethod
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + Edge_hasKGExtraction._allowed_properties
+
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley-ai-kg#Edge_hasKGExtraction'
+
 

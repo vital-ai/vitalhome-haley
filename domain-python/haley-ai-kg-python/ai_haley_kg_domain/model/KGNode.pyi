@@ -11,6 +11,7 @@ class KGNode(VITAL_Node):
         kGIndexDateTime: datetime
         kGIndexStatusURI: str
         kGModelVersion: str
+        kGNodeCacheDateTime: datetime
         kGTenantIdentifier: str
         kGValidTypeURI: str
         kGVersion: str

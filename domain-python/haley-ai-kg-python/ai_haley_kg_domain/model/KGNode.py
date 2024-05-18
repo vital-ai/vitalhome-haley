@@ -22,6 +22,7 @@ class KGNode(VITAL_Node):
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGIndexDateTime', 'prop_class': DateTimeProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGIndexStatusURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGModelVersion', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGNodeCacheDateTime', 'prop_class': DateTimeProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGTenantIdentifier', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGValidTypeURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGVersion', 'prop_class': StringProperty}, 
@@ -31,4 +32,9 @@ class KGNode(VITAL_Node):
     @classmethod
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + KGNode._allowed_properties
+
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley-ai-kg#KGNode'
+
 

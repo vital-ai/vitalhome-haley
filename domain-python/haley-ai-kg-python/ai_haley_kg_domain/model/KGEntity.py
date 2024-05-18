@@ -15,10 +15,20 @@ from ai_haley_kg_domain.model.KGNode import KGNode
 
 class KGEntity(KGNode):
     _allowed_properties = [
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGEntityAccountURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGEntityLoginURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGEntityType', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGEntityTypeDescription', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGFormType', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGProvenanceType', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGTypeMethodURI', 'prop_class': URIProperty}, 
     ]
 
     @classmethod
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + KGEntity._allowed_properties
+
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley-ai-kg#KGEntity'
 

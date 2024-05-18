@@ -19,11 +19,19 @@ class KGFrame(KGNode):
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasFrameSequence', 'prop_class': IntegerProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGBeliefModeType', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGExpressionType', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGFormType', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGFrameType', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGFrameTypeDescription', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGProvenanceType', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGTypeMethodURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasParentFrameURI', 'prop_class': URIProperty}, 
     ]
 
     @classmethod
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + KGFrame._allowed_properties
+
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley-ai-kg#KGFrame'
 

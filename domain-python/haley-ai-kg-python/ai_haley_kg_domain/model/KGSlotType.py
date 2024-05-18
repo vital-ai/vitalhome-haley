@@ -16,6 +16,7 @@ from ai_haley_kg_domain.model.KGType import KGType
 class KGSlotType(KGType):
     _allowed_properties = [
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGSlotTypeClassURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGSlotTypeExternIdentifier', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGSlotTypeLabel', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGSlotTypeName', 'prop_class': StringProperty}, 
     ]
@@ -23,4 +24,8 @@ class KGSlotType(KGType):
     @classmethod
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + KGSlotType._allowed_properties
+
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley-ai-kg#KGSlotType'
 

@@ -15,9 +15,14 @@ from ai_haley_kg_domain.model.Edge_hasKGEdge import Edge_hasKGEdge
 
 class Edge_hasPartOfKGFrameType(Edge_hasKGEdge):
     _allowed_properties = [
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGFrameTypeExternIdentifier', 'prop_class': StringProperty}, 
     ]
 
     @classmethod
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + Edge_hasPartOfKGFrameType._allowed_properties
+
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley-ai-kg#Edge_hasPartOfKGFrameType'
 
