@@ -15,6 +15,7 @@ from vital_ai_vitalsigns_core.model.VITAL_PeerEdge import VITAL_PeerEdge
 
 class Edge_hasKGPointer(VITAL_PeerEdge):
     _allowed_properties = [
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGIdentifier', 'prop_class': StringProperty}, 
     ]
 
     @classmethod
@@ -24,5 +25,4 @@ class Edge_hasKGPointer(VITAL_PeerEdge):
     @classmethod
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley-ai-kg#Edge_hasKGPointer'
-
 

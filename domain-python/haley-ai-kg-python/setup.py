@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='vital-ai-haley-kg',
-    version='0.1.7',
+    version='0.1.8',
     author='Marc Hadfield',
     author_email='marc@vital.ai',
     description='VitalSigns haley kg domain',

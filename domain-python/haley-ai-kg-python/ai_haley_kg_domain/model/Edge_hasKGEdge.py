@@ -18,6 +18,7 @@ class Edge_hasKGEdge(VITAL_PeerEdge):
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasEdgeName', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGDataHash', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGGraphAssertionDateTime', 'prop_class': DateTimeProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGIdentifier', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGIndexDateTime', 'prop_class': DateTimeProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGIndexStatusURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGModelVersion', 'prop_class': StringProperty}, 
@@ -34,5 +35,4 @@ class Edge_hasKGEdge(VITAL_PeerEdge):
     @classmethod
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge'
-
 

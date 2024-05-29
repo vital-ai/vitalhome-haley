@@ -7,6 +7,7 @@ class Edge_hasKGEdge(VITAL_PeerEdge):
         edgeName: str
         kGDataHash: str
         kGGraphAssertionDateTime: datetime
+        kGIdentifier: str
         kGIndexDateTime: datetime
         kGIndexStatusURI: str
         kGModelVersion: str
