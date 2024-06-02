@@ -10,21 +10,18 @@ from vital_ai_vitalsigns.model.properties.OtherProperty import OtherProperty
 from vital_ai_vitalsigns.model.properties.StringProperty import StringProperty
 from vital_ai_vitalsigns.model.properties.TruthProperty import TruthProperty
 from vital_ai_vitalsigns.model.properties.URIProperty import URIProperty
-from vital_ai_vitalsigns_core.model.VITAL_PeerEdge import VITAL_PeerEdge
+from ai_haley_kg_domain.model.KGNode import KGNode
 
 
-class Edge_hasKGNode(VITAL_PeerEdge):
+class KGGraph(KGNode):
     _allowed_properties = [
-        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI', 'prop_class': URIProperty}, 
-        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGIdentifier', 'prop_class': StringProperty}, 
-        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGJSON', 'prop_class': StringProperty}, 
     ]
 
     @classmethod
     def get_allowed_properties(cls):
-        return super().get_allowed_properties() + Edge_hasKGNode._allowed_properties
+        return super().get_allowed_properties() + KGGraph._allowed_properties
 
     @classmethod
     def get_class_uri(cls) -> str:
-        return 'http://vital.ai/ontology/haley-ai-kg#Edge_hasKGNode'
+        return 'http://vital.ai/ontology/haley-ai-kg#KGGraph'
 

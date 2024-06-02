@@ -8,9 +8,11 @@ class KGNode(VITAL_Node):
         kGActionTypeSummaryDateTime: datetime
         kGDataHash: str
         kGGraphAssertionDateTime: datetime
+        kGGraphURI: str
         kGIdentifier: str
         kGIndexDateTime: datetime
         kGIndexStatusURI: str
+        kGJSON: str
         kGModelVersion: str
         kGNodeCacheDateTime: datetime
         kGTenantIdentifier: str
