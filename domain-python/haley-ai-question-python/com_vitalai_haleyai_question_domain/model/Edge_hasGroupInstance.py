@@ -21,3 +21,8 @@ class Edge_hasGroupInstance(VITAL_PeerEdge):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + Edge_hasGroupInstance._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley-ai-question#Edge_hasGroupInstance'
+
+

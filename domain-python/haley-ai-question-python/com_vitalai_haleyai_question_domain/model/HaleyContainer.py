@@ -16,6 +16,7 @@ from vital_ai_vitalsigns.model.VITAL_Node import VITAL_Node
 class HaleyContainer(VITAL_Node):
     _allowed_properties = [
         {'uri': 'http://vital.ai/ontology/haley-ai-question#hasContainerRootURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-question#hasContainerSortOrder', 'prop_class': IntegerProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-question#hasContainerUpdateTime', 'prop_class': DateTimeProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-question#hasHaleyContainerAnswerSetURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-question#hasHaleyContainerScopeTypeURI', 'prop_class': URIProperty}, 
@@ -30,4 +31,9 @@ class HaleyContainer(VITAL_Node):
     @classmethod
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + HaleyContainer._allowed_properties
+
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley-ai-question#HaleyContainer'
+
 

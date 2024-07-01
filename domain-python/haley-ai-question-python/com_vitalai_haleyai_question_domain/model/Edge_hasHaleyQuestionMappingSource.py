@@ -21,3 +21,8 @@ class Edge_hasHaleyQuestionMappingSource(VITAL_PeerEdge):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + Edge_hasHaleyQuestionMappingSource._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley-ai-question#Edge_hasHaleyQuestionMappingSource'
+
+

@@ -23,3 +23,8 @@ class HaleyDefaultNumberAnswer(HaleyDefaultAnswer):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + HaleyDefaultNumberAnswer._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley-ai-question#HaleyDefaultNumberAnswer'
+
+

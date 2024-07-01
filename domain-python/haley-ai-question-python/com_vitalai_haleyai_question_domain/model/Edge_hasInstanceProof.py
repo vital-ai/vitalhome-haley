@@ -22,3 +22,8 @@ class Edge_hasInstanceProof(VITAL_PeerEdge):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + Edge_hasInstanceProof._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley-ai-question#Edge_hasInstanceProof'
+
+
