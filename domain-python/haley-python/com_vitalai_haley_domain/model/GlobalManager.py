@@ -21,3 +21,8 @@ class GlobalManager(HaleyAccount):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + GlobalManager._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley#GlobalManager'
+
+

@@ -21,3 +21,8 @@ class Edge_hasHaleyAccountTeam(VITAL_PeerEdge):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + Edge_hasHaleyAccountTeam._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley#Edge_hasHaleyAccountTeam'
+
+

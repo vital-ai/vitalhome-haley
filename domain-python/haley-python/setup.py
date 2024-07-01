@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='vital-ai-haley',
-    version='0.1.2',
+    version='0.1.5',
     author='Marc Hadfield',
     author_email='marc@vital.ai',
     description='VitalSigns haley domain',
@@ -10,12 +10,18 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/vital-ai/vitalhome-haley',
     packages=find_packages(),
+    entry_points={
+        'vitalsigns_packages': [
+            'com_vitalai_haley_domain = com_vitalai_haley_domain'
+        ]
+    },
     package_data={
-         '': ['*.pyi'],
+        '': ['*.pyi'],
+        'com_vitalai_haley_domain': ['domain-ontology/*.owl']
     },
     license='Apache License 2.0',
     install_requires=[
-            'vital-ai-aimp==0.1.2',
+            'vital-ai-aimp>=0.1.5',
         ],
     classifiers=[
         "Programming Language :: Python :: 3.10",

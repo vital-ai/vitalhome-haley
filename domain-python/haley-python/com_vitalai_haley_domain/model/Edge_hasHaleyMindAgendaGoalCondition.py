@@ -21,3 +21,8 @@ class Edge_hasHaleyMindAgendaGoalCondition(VITAL_PeerEdge):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + Edge_hasHaleyMindAgendaGoalCondition._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley#Edge_hasHaleyMindAgendaGoalCondition'
+
+

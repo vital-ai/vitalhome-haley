@@ -21,3 +21,8 @@ class HaleyMindAskMessage(HaleyMindMessage):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + HaleyMindAskMessage._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley#HaleyMindAskMessage'
+
+

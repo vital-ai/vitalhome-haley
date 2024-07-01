@@ -28,3 +28,8 @@ class HyperEdge_hasAccessGrant(VITAL_HyperEdge):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + HyperEdge_hasAccessGrant._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/haley#HyperEdge_hasAccessGrant'
+
+
