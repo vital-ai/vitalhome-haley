@@ -7,6 +7,7 @@ class KGSlot(KGNode):
         frameGraphURI: str
         kGBeliefModeType: str
         kGExpressionType: str
+        kGParticipationType: str
         kGSlotConstraintType: str
         kGSlotReferenceURI: str
         kGSlotType: str

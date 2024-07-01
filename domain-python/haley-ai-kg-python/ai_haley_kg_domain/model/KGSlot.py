@@ -18,6 +18,7 @@ class KGSlot(KGNode):
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasFrameGraphURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGBeliefModeType', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGExpressionType', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGParticipationType', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGSlotConstraintType', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGSlotReferenceURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGSlotType', 'prop_class': URIProperty}, 
@@ -33,5 +34,4 @@ class KGSlot(KGNode):
     @classmethod
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley-ai-kg#KGSlot'
-
 
