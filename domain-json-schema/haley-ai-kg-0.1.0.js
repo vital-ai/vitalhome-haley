@@ -6,7 +6,7 @@ var haley_ai_kg_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/haley-ai-kg",
   "name" : "haley-ai-kg-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "aaae9f99645c21db1285aef03cfdcdfd",
+  "domainOWLHash" : "daebf8db976331e78bea4fa64e103161",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/haley-ai-question" ],
   "schemas" : [ {
@@ -317,6 +317,20 @@ var haley_ai_kg_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGChatInteractionEventNode",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEvent" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGNode" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGChatInteractionEventSuccessor",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEvent" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEvent" ],
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGChatMessage",
     "parent" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGChatInteraction" ],
@@ -358,6 +372,9 @@ var haley_ai_kg_0_1_0_schema = {
     "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGNode", "http://vital.ai/ontology/haley-ai-kg#KGType" ],
     "properties" : {
       "http://vital.ai/ontology/haley-ai-kg#hasEdgeName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionGraphURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/haley-ai-kg#hasKGDataHash" : {
@@ -752,6 +769,13 @@ var haley_ai_kg_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGRoomParticipant",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGRoom" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGActor", "http://vital.ai/ontology/haley-ai-kg#KGAgent" ],
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGRunDocument",
     "parent" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGCodeDocument" ],
@@ -848,9 +872,16 @@ var haley_ai_kg_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGTaskDependency",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGTask" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGTask" ],
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGThread",
     "parent" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge",
-    "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGInteraction" ],
+    "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGInteraction", "http://vital.ai/ontology/haley-ai-kg#KGRoom" ],
     "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGThread" ],
     "properties" : {
     }
@@ -891,6 +922,16 @@ var haley_ai_kg_0_1_0_schema = {
     "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGEntity" ],
     "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGEMail" ],
     "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasRelatedKGCategory",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGCategory" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGCategory" ],
+    "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGRelatedCategoryType" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasRequestKGFrame",
@@ -990,6 +1031,13 @@ var haley_ai_kg_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasThreadKGFrame",
     "parent" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGThread" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGFrame" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasToolRequestKGFrame",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGToolRequest" ],
     "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGFrame" ],
     "properties" : {
     }
@@ -1333,13 +1381,16 @@ var haley_ai_kg_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGChannel",
-    "parent" : "http://vital.ai/ontology/haley-ai-kg#KGNode",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#KGSpace",
     "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGChatBotMessage",
     "parent" : "http://vital.ai/ontology/haley-ai-kg#KGChatMessage",
     "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGAgentURI" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGChatInteraction",
@@ -1356,7 +1407,26 @@ var haley_ai_kg_0_1_0_schema = {
       },
       "http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionType" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGRoomURI" : {
+        "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEvent",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#KGNode",
+    "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionEventType" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#KGType",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGChatInteractionType",
@@ -1382,6 +1452,9 @@ var haley_ai_kg_0_1_0_schema = {
       "http://vital.ai/ontology/haley-ai-kg#hasKGChatMessageType" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGRoomURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/haley-ai-kg#hasPrimaryLanguageType" : {
         "type" : "string"
       }
@@ -1395,6 +1468,9 @@ var haley_ai_kg_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGChatUserMessage",
     "parent" : "http://vital.ai/ontology/haley-ai-kg#KGChatMessage",
     "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGActorURI" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGChoiceOptionSlot",
@@ -2279,6 +2355,9 @@ var haley_ai_kg_0_1_0_schema = {
       "http://vital.ai/ontology/haley-ai-kg#hasKGActionTypeSummaryDateTime" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionGraphURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/haley-ai-kg#hasKGDataHash" : {
         "type" : "string"
       },
@@ -2597,6 +2676,11 @@ var haley_ai_kg_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGRelatedCategoryType",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#KGType",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGRelationType",
     "parent" : "http://vital.ai/ontology/haley-ai-kg#KGType",
     "properties" : {
@@ -2679,6 +2763,19 @@ var haley_ai_kg_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGRoom",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#KGSpace",
+    "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGRoomType" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGRoomType",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#KGType",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGRunDocument",
     "parent" : "http://vital.ai/ontology/haley-ai-kg#KGNode",
     "properties" : {
@@ -2716,6 +2813,47 @@ var haley_ai_kg_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGSearchType",
     "parent" : "http://vital.ai/ontology/haley-ai-kg#KGType",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGService",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGServiceType" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGServiceEvent",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventMetaJSON" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventSpaceIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventTimestamp" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventUUID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventUsername" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGServiceURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGServiceEventType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGServiceType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
     }
   }, {
@@ -2805,6 +2943,14 @@ var haley_ai_kg_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGSpace",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#KGNode",
+    "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSpaceIdentifier" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGStatement",
     "parent" : "http://vital.ai/ontology/haley-ai-kg#KGNode",
     "properties" : {
@@ -2868,9 +3014,17 @@ var haley_ai_kg_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGTask",
     "parent" : "http://vital.ai/ontology/haley-ai-kg#KGNode",
     "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGTaskStatusURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/haley-ai-kg#hasKGTaskType" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGTaskStatus",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGTaskType",
@@ -2921,6 +3075,19 @@ var haley_ai_kg_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGThread",
     "parent" : "http://vital.ai/ontology/haley-ai-kg#KGNode",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGToolRequest",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#KGNode",
+    "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGToolRequestType" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGToolRequestType",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#KGType",
     "properties" : {
     }
   }, {
@@ -3124,6 +3291,19 @@ var haley_ai_kg_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#MatrixServiceEvent",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#KGServiceEvent",
+    "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasMatrixServiceEventType" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#MatrixServiceEventType",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#KGServiceEventType",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#NewsCategory",
     "parent" : "http://vital.ai/ontology/haley-taxonomy#TaxonomyNode",
     "properties" : {
@@ -3131,6 +3311,11 @@ var haley_ai_kg_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#NewsContentCategory",
     "parent" : "http://vital.ai/ontology/haley-taxonomy#TaxonomyNode",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#SlackServiceEvent",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#KGServiceEvent",
     "properties" : {
     }
   } ],
@@ -3393,6 +3578,12 @@ var haley_ai_kg_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGActorURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGChatUserMessage" ],
+    "shortName" : "kGActorURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGAgentAvatarImageSourceURL",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGAgent" ],
     "shortName" : "kGAgentAvatarImageSourceURL",
@@ -3555,6 +3746,12 @@ var haley_ai_kg_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGAgentURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGChatBotMessage" ],
+    "shortName" : "kGAgentURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGAggregationDoubleValue",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGAggregationResult" ],
     "shortName" : "kGAggregationDoubleValue",
@@ -3644,6 +3841,18 @@ var haley_ai_kg_0_1_0_schema = {
     "shortName" : "kGChatInteractionCompleteText",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionEventType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEvent" ],
+    "shortName" : "kGChatInteractionEventType",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionGraphURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge", "http://vital.ai/ontology/haley-ai-kg#KGNode" ],
+    "shortName" : "kGChatInteractionGraphURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionSummaryText",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGChatInteraction" ],
@@ -4575,6 +4784,12 @@ var haley_ai_kg_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGRelatedCategoryType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#Edge_hasRelatedKGCategory" ],
+    "shortName" : "kGRelatedCategoryType",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGRelationType",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGRefRelation", "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGRelation", "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGRelationMention", "http://vital.ai/ontology/haley-ai-kg#KGTypePath" ],
     "shortName" : "kGRelationType",
@@ -4629,6 +4844,18 @@ var haley_ai_kg_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGRoomType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGRoom" ],
+    "shortName" : "kGRoomType",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGRoomURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGChatInteraction", "http://vital.ai/ontology/haley-ai-kg#KGChatMessage" ],
+    "shortName" : "kGRoomURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGRunCodeOutput",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGRunDocument" ],
     "shortName" : "kGRunCodeOutput",
@@ -4650,6 +4877,54 @@ var haley_ai_kg_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGSearchType",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGSearch" ],
     "shortName" : "kGSearchType",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventMetaJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGServiceEvent" ],
+    "shortName" : "kGServiceEventMetaJSON",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventSpaceIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGServiceEvent" ],
+    "shortName" : "kGServiceEventSpaceIdentifier",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventTimestamp",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGServiceEvent" ],
+    "shortName" : "kGServiceEventTimestamp",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEvent" ],
+    "shortName" : "kGServiceEventURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventUUID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGServiceEvent" ],
+    "shortName" : "kGServiceEventUUID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventUsername",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGServiceEvent" ],
+    "shortName" : "kGServiceEventUsername",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGServiceType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGService" ],
+    "shortName" : "kGServiceType",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGServiceURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGServiceEvent" ],
+    "shortName" : "kGServiceURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
@@ -4725,6 +5000,12 @@ var haley_ai_kg_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGSpaceIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGSpace" ],
+    "shortName" : "kGSpaceIdentifier",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGStartByteIndex",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGExtraction" ],
     "shortName" : "kGStartByteIndex",
@@ -4791,6 +5072,12 @@ var haley_ai_kg_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGTaskStatusURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGTask" ],
+    "shortName" : "kGTaskStatusURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGTaskType",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGTask", "http://vital.ai/ontology/haley-ai-kg#KGTypePath" ],
     "shortName" : "kGTaskType",
@@ -4820,6 +5107,12 @@ var haley_ai_kg_0_1_0_schema = {
     "shortName" : "kGTenantIdentifier",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGToolRequestType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGToolRequest" ],
+    "shortName" : "kGToolRequestType",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGToolResultType",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGToolResult" ],
@@ -4982,6 +5275,12 @@ var haley_ai_kg_0_1_0_schema = {
     "shortName" : "longTextSlotValue",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasMatrixServiceEventType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#MatrixServiceEvent" ],
+    "shortName" : "matrixServiceEventType",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasMultiChoiceSlotValues",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGMultiChoiceOptionSlot", "http://vital.ai/ontology/haley-ai-kg#KGMultiChoiceSlot" ],
