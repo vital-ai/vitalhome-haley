@@ -9,5 +9,6 @@ class KGChatMessage(KGNode):
         kGChatMessageSequence: int
         kGChatMessageText: str
         kGChatMessageType: str
+        kGRoomURI: str
         primaryLanguageType: str
 

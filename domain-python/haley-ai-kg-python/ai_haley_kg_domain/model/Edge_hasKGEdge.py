@@ -16,6 +16,7 @@ from vital_ai_vitalsigns_core.model.VITAL_PeerEdge import VITAL_PeerEdge
 class Edge_hasKGEdge(VITAL_PeerEdge):
     _allowed_properties = [
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasEdgeName', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionGraphURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGDataHash', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGGraphAssertionDateTime', 'prop_class': DateTimeProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI', 'prop_class': URIProperty}, 

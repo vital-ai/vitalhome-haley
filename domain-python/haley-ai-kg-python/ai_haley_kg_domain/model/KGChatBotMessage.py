@@ -15,6 +15,7 @@ from ai_haley_kg_domain.model.KGChatMessage import KGChatMessage
 
 class KGChatBotMessage(KGChatMessage):
     _allowed_properties = [
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGAgentURI', 'prop_class': URIProperty}, 
     ]
 
     @classmethod
@@ -24,5 +25,4 @@ class KGChatBotMessage(KGChatMessage):
     @classmethod
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley-ai-kg#KGChatBotMessage'
-
 

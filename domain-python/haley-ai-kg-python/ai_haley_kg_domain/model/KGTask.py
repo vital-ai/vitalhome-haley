@@ -15,6 +15,7 @@ from ai_haley_kg_domain.model.KGNode import KGNode
 
 class KGTask(KGNode):
     _allowed_properties = [
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGTaskStatusURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGTaskType', 'prop_class': URIProperty}, 
     ]
 
@@ -25,5 +26,4 @@ class KGTask(KGNode):
     @classmethod
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley-ai-kg#KGTask'
-
 

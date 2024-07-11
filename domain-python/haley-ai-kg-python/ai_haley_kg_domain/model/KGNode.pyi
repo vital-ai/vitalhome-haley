@@ -6,6 +6,7 @@ from vital_ai_vitalsigns.model.VITAL_Node import VITAL_Node
 class KGNode(VITAL_Node):
         kGActionTypeList: str
         kGActionTypeSummaryDateTime: datetime
+        kGChatInteractionGraphURI: str
         kGDataHash: str
         kGGraphAssertionDateTime: datetime
         kGGraphURI: str

@@ -8,4 +8,5 @@ class KGChatInteraction(KGNode):
         kGChatInteractionCompleteText: str
         kGChatInteractionSummaryText: str
         kGChatInteractionType: str
+        kGRoomURI: str
 

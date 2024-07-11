@@ -10,10 +10,10 @@ from vital_ai_vitalsigns.model.properties.OtherProperty import OtherProperty
 from vital_ai_vitalsigns.model.properties.StringProperty import StringProperty
 from vital_ai_vitalsigns.model.properties.TruthProperty import TruthProperty
 from vital_ai_vitalsigns.model.properties.URIProperty import URIProperty
-from ai_haley_kg_domain.model.KGNode import KGNode
+from ai_haley_kg_domain.model.KGSpace import KGSpace
 
 
-class KGChannel(KGNode):
+class KGChannel(KGSpace):
     _allowed_properties = [
     ]
 

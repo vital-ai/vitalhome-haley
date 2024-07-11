@@ -19,6 +19,7 @@ class KGChatInteraction(KGNode):
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionCompleteText', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionSummaryText', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionType', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGRoomURI', 'prop_class': URIProperty}, 
     ]
 
     @classmethod

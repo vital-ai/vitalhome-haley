@@ -20,6 +20,7 @@ class KGChatMessage(KGNode):
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGChatMessageSequence', 'prop_class': LongProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGChatMessageText', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGChatMessageType', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGRoomURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasPrimaryLanguageType', 'prop_class': URIProperty}, 
     ]
 
@@ -30,5 +31,4 @@ class KGChatMessage(KGNode):
     @classmethod
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley-ai-kg#KGChatMessage'
-
 

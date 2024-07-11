@@ -1,7 +1,7 @@
 
 import datetime
-from ai_haley_kg_domain.model.KGNode import KGNode
+from ai_haley_kg_domain.model.KGSpace import KGSpace
 
 
-class KGChannel(KGNode):
+class KGChannel(KGSpace):
     pass

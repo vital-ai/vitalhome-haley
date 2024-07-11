@@ -17,6 +17,7 @@ class KGNode(VITAL_Node):
     _allowed_properties = [
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGActionTypeList', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGActionTypeSummaryDateTime', 'prop_class': DateTimeProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionGraphURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGDataHash', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGGraphAssertionDateTime', 'prop_class': DateTimeProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI', 'prop_class': URIProperty}, 
