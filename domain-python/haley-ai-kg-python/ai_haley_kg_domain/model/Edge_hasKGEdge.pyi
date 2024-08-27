@@ -17,5 +17,6 @@ class Edge_hasKGEdge(VITAL_PeerEdge):
         kGTenantIdentifier: str
         kGValidTypeURI: str
         kGVersion: str
+        kGVisualStyleJSON: str
         kGraphDescription: str
 

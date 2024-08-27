@@ -215,6 +215,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGActorURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGActorURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGChatUserMessage"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGActor"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#hasKGAgentPublishStatusURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGAgentPublishStatusURI">
@@ -257,6 +266,15 @@
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGAgentType">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGAgent"/>
         <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGAgentType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGAgentURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGAgentURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGChatBotMessage"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGAgent"/>
     </owl:ObjectProperty>
     
 
@@ -376,6 +394,40 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGCategoryType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGChannelURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGChannelURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGChatInteraction"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGChannel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionEventType -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionEventType">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEvent"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionGraphURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGChatInteractionGraphURI">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-ai-kg#KGNode"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGChatInteraction"/>
     </owl:ObjectProperty>
     
 
@@ -818,6 +870,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGParticipationType -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGParticipationType">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGSlot"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGParticipationType"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#hasKGPlaceURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGPlaceURI">
@@ -1092,6 +1153,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGRelatedCategoryType -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGRelatedCategoryType">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#Edge_hasRelatedKGCategory"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGRelatedCategoryType"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#hasKGRelationType -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGRelationType">
@@ -1155,6 +1225,31 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGRoomType -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGRoomType">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGRoom"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGRoomType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGRoomURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGRoomURI">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-ai-kg#KGChatInteraction"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-ai-kg#KGChatMessage"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGRoom"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#hasKGRunDocumentType -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGRunDocumentType">
@@ -1169,6 +1264,33 @@
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGSearchType">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGSearch"/>
         <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGSearchType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEvent"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGServiceEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGServiceType -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGServiceType">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGService"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGServiceType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGServiceURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGServiceURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGServiceEvent"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGService"/>
     </owl:ObjectProperty>
     
 
@@ -1262,6 +1384,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGTaskStatusURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGTaskStatusURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGTask"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGTaskStatus"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#hasKGTaskType -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGTaskType">
@@ -1306,6 +1437,15 @@
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGTenantAccountURI">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGTenant"/>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital#Account"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGToolRequestType -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGToolRequestType">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGToolRequest"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGToolRequestType"/>
     </owl:ObjectProperty>
     
 
@@ -1390,6 +1530,15 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGValidType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasMatrixServiceEventType -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasMatrixServiceEventType">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#MatrixServiceEvent"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-kg#MatrixServiceEventType"/>
     </owl:ObjectProperty>
     
 
@@ -3141,6 +3290,52 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventMetaJSON -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventMetaJSON">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGServiceEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <haley:hasContainsJSONFlag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</haley:hasContainsJSONFlag>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventSpaceIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventSpaceIdentifier">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGServiceEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventTimestamp">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGServiceEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventUUID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventUUID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGServiceEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventUsername -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGServiceEventUsername">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGServiceEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#hasKGSlotRoleSequence -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGSlotRoleSequence">
@@ -3207,6 +3402,15 @@
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGSourceCode">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGCodeDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGSpaceIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGSpaceIdentifier">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGSpace"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -3458,6 +3662,23 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGVisualStyleJSON -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGVisualStyleJSON">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley-ai-kg#KGNode"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <haley:hasContainsJSONFlag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</haley:hasContainsJSONFlag>
     </owl:DatatypeProperty>
     
 
@@ -4093,6 +4314,26 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#Edge_hasKGChatInteractionEventNode -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGChatInteractionEventNode">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGNode"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#Edge_hasKGChatInteractionEventSuccessor -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGChatInteractionEventSuccessor">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEvent"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEvent"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#Edge_hasKGChatMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGChatMessage">
@@ -4536,6 +4777,17 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#Edge_hasKGRoomParticipant -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGRoomParticipant">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGActor"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGAgent"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGRoom"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#Edge_hasKGRunDocument -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGRunDocument">
@@ -4627,12 +4879,23 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#Edge_hasKGTaskDependency -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGTaskDependency">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGTask"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGTask"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#Edge_hasKGThread -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGThread">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGThread"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGInteraction"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGRoom"/>
     </owl:Class>
     
 
@@ -4685,6 +4948,16 @@
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGEMail"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#Edge_hasRelatedKGCategory -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#Edge_hasRelatedKGCategory">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGCategory"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGCategory"/>
     </owl:Class>
     
 
@@ -4830,6 +5103,16 @@
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGFrame"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGThread"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#Edge_hasToolRequestKGFrame -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#Edge_hasToolRequestKGFrame">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGFrame"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGToolRequest"/>
     </owl:Class>
     
 
@@ -5096,6 +5379,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGChannel -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGChannel">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGSpace"/>
+        <rdfs:comment>Represents a channel (a &quot;place&quot;) where chat interactions may occur.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#KGChatBotMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGChatBotMessage">
@@ -5108,6 +5400,22 @@
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGChatInteraction">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEvent -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEvent">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGType"/>
     </owl:Class>
     
 
@@ -5757,6 +6065,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGParticipationType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGParticipationType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+        <rdfs:comment>Meant to capture broadly the manner in which a slot participates in a frame.  This is typically split into two as Subject/Object, Head/Tail, Source/Target.  An N-Ary has a more nuianced manner that a slot participates in a relationship, that is captured by the slot type.  In knowledge modeling, if the slot type gets (even more) granular then participation type can be used for broader roles such as &quot;Experiencer&quot; as per FrameNet role definitions in place of the very broad source/target split.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#KGPath -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGPath">
@@ -5970,6 +6287,14 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGRelatedCategoryType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGRelatedCategoryType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGType"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#KGRelationType -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGRelationType">
@@ -6036,6 +6361,23 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGRoom -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGRoom">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGSpace"/>
+        <rdfs:comment>Represents a room as a &quot;place&quot; where chat interactions occur.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGRoomType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGRoomType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGType"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#KGRunDocument -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGRunDocument">
@@ -6073,6 +6415,40 @@
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGSearchType">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGService -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGService">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+        <rdfs:comment>Represents an instance of a service that an agent may interact with.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGServiceEvent -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGServiceEvent">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGServiceEventType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGServiceEventType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGServiceType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGServiceType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+        <rdfs:comment>Represents a type of KGService, such as Slack.</rdfs:comment>
     </owl:Class>
     
 
@@ -6134,6 +6510,14 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGSpace -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGSpace">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGNode"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#KGStatement -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGStatement">
@@ -6190,6 +6574,14 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGTaskStatus -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGTaskStatus">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#KGTaskType -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGTaskType">
@@ -6234,6 +6626,22 @@
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGThread">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGToolRequest -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGToolRequest">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGToolRequestType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#KGToolRequestType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGType"/>
     </owl:Class>
     
 
@@ -6343,6 +6751,22 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#MatrixServiceEvent -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#MatrixServiceEvent">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGServiceEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#MatrixServiceEventType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#MatrixServiceEventType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGServiceEventType"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#NewsCategory -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#NewsCategory">
@@ -6355,6 +6779,14 @@
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#NewsContentCategory">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-taxonomy#TaxonomyNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#SlackServiceEvent -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley-ai-kg#SlackServiceEvent">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGServiceEvent"/>
     </owl:Class>
     
 
@@ -6706,6 +7138,38 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType_BOT_MESSAGE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType_BOT_MESSAGE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType_USER_JOINED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType_USER_JOINED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType_USER_LEFT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType_USER_LEFT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType_USER_MESSAGE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType_USER_MESSAGE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGChatInteractionEventType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#KGCodeLanguage_GROOVY -->
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGCodeLanguage_GROOVY">
@@ -7007,6 +7471,22 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGParticipationType_SOURCE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGParticipationType_SOURCE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGParticipationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGParticipationType_TARGET -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGParticipationType_TARGET">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGParticipationType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#KGProvenanceType_CANONICAL -->
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGProvenanceType_CANONICAL">
@@ -7123,6 +7603,22 @@
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGRatingValue_POSITIVE">
         <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGRatingValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGServiceType_MATRIX -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGServiceType_MATRIX">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGServiceType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGServiceType_SLACK -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGServiceType_SLACK">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGServiceType"/>
     </owl:NamedIndividual>
     
 
@@ -7247,6 +7743,38 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGTaskStatus_ERROR -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGTaskStatus_ERROR">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGTaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGTaskStatus_FAILED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGTaskStatus_FAILED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGTaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGTaskStatus_IN_PROGRESS -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGTaskStatus_IN_PROGRESS">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGTaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#KGTaskStatus_NEW -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGTaskStatus_NEW">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGTaskStatus"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#KGTypeMethod_FREEFORM -->
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#KGTypeMethod_FREEFORM">
@@ -7315,6 +7843,22 @@
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#LessThanOrEqualToComparator">
         <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGConstraintComparator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#MatrixServiceEventType_USER_JOINS -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#MatrixServiceEventType_USER_JOINS">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#MatrixServiceEventType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#MatrixServiceEventType_USER_LEAVES -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley-ai-kg#MatrixServiceEventType_USER_LEAVES">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley-ai-kg#MatrixServiceEventType"/>
     </owl:NamedIndividual>
     
 

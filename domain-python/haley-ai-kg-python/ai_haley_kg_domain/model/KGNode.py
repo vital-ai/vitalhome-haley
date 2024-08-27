@@ -30,6 +30,7 @@ class KGNode(VITAL_Node):
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGTenantIdentifier', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGValidTypeURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGVersion', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGVisualStyleJSON', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGraphDescription', 'prop_class': StringProperty}, 
     ]
 

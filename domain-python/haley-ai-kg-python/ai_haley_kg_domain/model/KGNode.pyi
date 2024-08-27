@@ -19,5 +19,6 @@ class KGNode(VITAL_Node):
         kGTenantIdentifier: str
         kGValidTypeURI: str
         kGVersion: str
+        kGVisualStyleJSON: str
         kGraphDescription: str
 
