@@ -9,7 +9,6 @@ class KGNode(VITAL_Node):
         kGChatInteractionGraphURI: str
         kGDataHash: str
         kGGraphAssertionDateTime: datetime
-        kGGraphURI: str
         kGIdentifier: str
         kGIndexDateTime: datetime
         kGIndexStatusURI: str
@@ -21,4 +20,6 @@ class KGNode(VITAL_Node):
         kGVersion: str
         kGVisualStyleJSON: str
         kGraphDescription: str
+
+kGraphDescription: str
 

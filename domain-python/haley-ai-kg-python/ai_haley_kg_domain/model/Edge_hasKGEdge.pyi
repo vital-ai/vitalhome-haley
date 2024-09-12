@@ -8,7 +8,6 @@ class Edge_hasKGEdge(VITAL_PeerEdge):
         kGChatInteractionGraphURI: str
         kGDataHash: str
         kGGraphAssertionDateTime: datetime
-        kGGraphURI: str
         kGIdentifier: str
         kGIndexDateTime: datetime
         kGIndexStatusURI: str
@@ -19,4 +18,6 @@ class Edge_hasKGEdge(VITAL_PeerEdge):
         kGVersion: str
         kGVisualStyleJSON: str
         kGraphDescription: str
+
+kGraphDescription: str
 
