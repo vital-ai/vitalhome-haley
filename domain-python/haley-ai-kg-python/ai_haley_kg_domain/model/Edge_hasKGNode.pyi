@@ -7,6 +7,3 @@ class Edge_hasKGNode(VITAL_PeerEdge):
         kGIdentifier: str
         kGJSON: str
 
-tr
-        kGJSON: str
-
