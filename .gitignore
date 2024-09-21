@@ -1,5 +1,8 @@
 **/.DS_Store
 
+old/*
+
+
 ### VITALSIGNS MANAGED START ###
 
 # Ignore protege catalog xml files

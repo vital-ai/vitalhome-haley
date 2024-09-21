@@ -6,14 +6,24 @@ var haley_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/haley",
   "name" : "haley-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "b988f18336f5df54141f96c1a30bb05a",
+  "domainOWLHash" : "75949317b563ac25f30c97c3615ab11e",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-aimp" ],
   "schemas" : [ {
+    "extends" : "http://vital.ai/ontology/vital#Account",
+    "properties" : {
+      "http://vital.ai/ontology/haley#isHaleyTestCase" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
     "extends" : "http://vital.ai/ontology/vital#Login",
     "properties" : {
       "http://vital.ai/ontology/haley#hasHaleyAccessLoginTypeClassURI" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#isHaleyTestCase" : {
+        "type" : "boolean"
       }
     }
   }, {
@@ -30,6 +40,9 @@ var haley_0_1_0_schema = {
       },
       "http://vital.ai/ontology/haley#hasDialogResponseTypeURI" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasRespondingToClassURI" : {
+        "type" : "string"
       }
     }
   }, {
@@ -37,6 +50,144 @@ var haley_0_1_0_schema = {
     "properties" : {
       "http://vital.ai/ontology/haley#isGenerateExemplar" : {
         "type" : "boolean"
+      }
+    }
+  }, {
+    "extends" : "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasAffectedResourceCount" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandStartDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyAccessViolationDescription" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyAccessViolationTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyResponseTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartition" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartitionAssignmentList" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandSentDateTime" : {
+        "type" : "number"
+      }
+    }
+  }, {
+    "extends" : "http://vital.ai/ontology/vital-aimp#InterAccountMessage",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasAffectedResourceCount" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandStartDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyResponseTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartition" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartitionAssignmentList" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandSentDateTime" : {
+        "type" : "number"
+      }
+    }
+  }, {
+    "extends" : "http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasAffectedResourceCount" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyResponseTypeURI" : {
+        "type" : "string"
       }
     }
   }, {
@@ -75,6 +226,15 @@ var haley_0_1_0_schema = {
           "type" : "string"
         }
       },
+      "http://vital.ai/ontology/haley#hasOriginDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasOriginURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasPayloadMessageURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/haley#hasReferenceURI" : {
         "type" : "string"
       },
@@ -111,6 +271,15 @@ var haley_0_1_0_schema = {
         "items" : {
           "type" : "string"
         }
+      },
+      "http://vital.ai/ontology/haley#hasOriginDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasOriginURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasPayloadMessageURI" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/haley#hasReferenceURI" : {
         "type" : "string"
@@ -161,6 +330,15 @@ var haley_0_1_0_schema = {
           "type" : "string"
         }
       },
+      "http://vital.ai/ontology/haley#hasOriginDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasOriginURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasPayloadMessageURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/haley#hasReferenceURI" : {
         "type" : "string"
       },
@@ -209,6 +387,15 @@ var haley_0_1_0_schema = {
         "items" : {
           "type" : "string"
         }
+      },
+      "http://vital.ai/ontology/haley#hasOriginDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasOriginURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasPayloadMessageURI" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/haley#hasReferenceURI" : {
         "type" : "string"
@@ -268,6 +455,15 @@ var haley_0_1_0_schema = {
           "type" : "string"
         }
       },
+      "http://vital.ai/ontology/haley#hasOriginDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasOriginURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasPayloadMessageURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/haley#hasReferenceURI" : {
         "type" : "string"
       },
@@ -286,6 +482,11 @@ var haley_0_1_0_schema = {
       "http://vital.ai/ontology/haley#hasWikiURL" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#AgentDeveloper",
+    "parent" : "http://vital.ai/ontology/haley#HaleyAccount",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/haley#Customer",
@@ -447,6 +648,40 @@ var haley_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley#Edge_hasHaleyAccessRightContext",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley#HaleyAccessRight" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley#HaleyAccessRightContext" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#Edge_hasHaleyAccessRightGraphObject",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley#HaleyAccessRight" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley#HaleyAccessRightGraphObject" ],
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyAccessRightMessageDirectionURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#Edge_hasHaleyAccessRightMessage",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley#HaleyAccessRight" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley#HaleyAccessRightMessage" ],
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyAccessRightMessageDirectionURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#Edge_hasHaleyAccessRightProperty",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley#HaleyAccessRightGraphObject", "http://vital.ai/ontology/haley#HaleyAccessRightMessage" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley#HaleyAccessRightProperty" ],
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley#Edge_hasHaleyAccessTeamPolicy",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/haley#HaleyAccountTeam" ],
@@ -465,6 +700,13 @@ var haley_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
     "destinationDomains" : [ "http://vital.ai/ontology/haley#HaleyAccountOffice" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#Edge_hasHaleyAccountOfficeLocation",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley#HaleyAccountOffice" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley#HaleyAccountOfficeLocation" ],
     "properties" : {
     }
   }, {
@@ -566,6 +808,27 @@ var haley_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley#Edge_hasHaleyMindPlanActionInstance",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley#HaleyMindPlanInstance" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley#HaleyMindPlanActionInstance" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#Edge_hasHaleyMindPlanActionInstanceDestination",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley#HaleyMindPlanActionInstance" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#Edge_hasHaleyMindPlanActionInstanceSource",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley#HaleyMindPlanActionInstance" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley#Edge_hasHaleyMindPlanActionSlot",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/haley#HaleyMindPlanAction" ],
@@ -653,6 +916,34 @@ var haley_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley#Edge_hasHaleyWeatherAlert",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley#HaleyWeatherAlert" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#Edge_hasHaleyWeatherDailyReport",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley#HaleyWeatherDailyReport" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#Edge_hasHaleyWeatherHourlyReport",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley#HaleyWeatherHourlyReport" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#Edge_hasHaleyWeatherMinutelyReport",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley#HaleyWeatherMinutelyReport" ],
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley#Edge_hasProofJustificationReason",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/haley#ProofTreeJustificationNode" ],
@@ -725,10 +1016,10 @@ var haley_0_1_0_schema = {
       "http://vital.ai/ontology/haley#hasRoleGrantTypeURI" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital#hasLoginURI" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital#hasLoginURI" : {
         "type" : "string"
       }
     }
@@ -794,6 +1085,81 @@ var haley_0_1_0_schema = {
       "http://vital.ai/ontology/haley#hasHaleyAccessReferenceObjectURI" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyAccessRightContext",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasAccessRightChannelContextURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyAccessRightGraphObject",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyAccessRightGraphObjectClassURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyAccessRightRuleTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyAccessRightTypeURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyAccessRightMessage",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyAccessRightMessageClassURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyAccessRightRuleTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyAccessRightTypeURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyAccessRightMessageDirection",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyAccessRightMessageRule",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyAccessRightProperty",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyAccessRightPropertyClassURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyAccessRightRuleTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyAccessRightTypeURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyAccessRightPropertyRule",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyAccessRightRuleType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyAccessRightType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/haley#HaleyAccessRoleGrantAspect",
@@ -863,6 +1229,35 @@ var haley_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyAccountOfficeLocation",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasOfficeLocationAddressCity" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasOfficeLocationAddressCountry" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasOfficeLocationAddressCounty" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasOfficeLocationAddressLine1" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasOfficeLocationAddressLine2" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasOfficeLocationAddressPostalCode" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasOfficeLocationAddressProvince" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasOfficeLocationAddressState" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley#HaleyAccountTeam",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
@@ -872,6 +1267,11 @@ var haley_0_1_0_schema = {
       "http://vital.ai/ontology/haley#hasAccountTeamIdentifier" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyAirQualityReport",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/haley#HaleyAnalyticsContainer",
@@ -899,9 +1299,25 @@ var haley_0_1_0_schema = {
       "http://vital.ai/ontology/haley#hasEventObjectURI" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/haley#hasEventType" : {
+      "http://vital.ai/ontology/vital-aimp#hasEventType" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyCanadianProvinceOrTerritory",
+    "parent" : "http://vital.ai/ontology/haley#HaleyCountryDivision",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasPostalAbbreviation" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasWikipediaURL" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyCelestialBody",
+    "parent" : "http://vital.ai/ontology/haley#HaleyRegion",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/haley#HaleyChannelAnswer",
@@ -914,6 +1330,17 @@ var haley_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyCity",
+    "parent" : "http://vital.ai/ontology/haley#HaleyRegion",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasDivisionRegionURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasWikipediaURL" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley#HaleyCollection",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
@@ -921,6 +1348,41 @@ var haley_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/haley#HaleyCommandGroup",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyCommandStateType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyCompassDirection",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasCompassDirectionLabel" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasCompassDirectionPosition" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCompassDirectionSymbol" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyCountry",
+    "parent" : "http://vital.ai/ontology/haley#HaleyRegion",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyCountryISOCode" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasWikipediaURL" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyCountryDivision",
+    "parent" : "http://vital.ai/ontology/haley#HaleyRegion",
     "properties" : {
     }
   }, {
@@ -987,6 +1449,11 @@ var haley_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/haley#HaleyDialogRouteType",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyDocGenProcessorRequest",
+    "parent" : "http://vital.ai/ontology/haley#HaleyProcessorRequest",
     "properties" : {
     }
   }, {
@@ -1060,12 +1527,122 @@ var haley_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/haley#HaleyIntentCommand",
     "parent" : "http://vital.ai/ontology/vital-aimp#UserCommandMessage",
     "properties" : {
+      "http://vital.ai/ontology/haley#hasCommandChildEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandStartDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartition" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartitionAssignmentList" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandSentDateTime" : {
+        "type" : "number"
+      },
       "http://vital.ai/ontology/vital-aimp#hasIntent" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasPropertyValue" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyInterAccountNotification",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyInterAccountRecord",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasInterAccountDestinationChannelURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasInterAccountRecipientAccountURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasInterAccountRecipientLoginURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasInterAccountReplyMessageURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasInterAccountRequestDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasInterAccountRequestURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasInterAccountResponseDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasInterAccountResponseStatusURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasInterAccountResponseURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasInterAccountSenderAccountURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasInterAccountSenderLoginURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasInterAccountSenderMessageURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasInterAccountSerializedRequest" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasInterAccountSerializedResponse" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasInterAccountSourceChannelURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyInterAccountRequest",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyInterAccountResponse",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/haley#HaleyMailingList",
@@ -1146,6 +1723,11 @@ var haley_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyMindApp",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley#HaleyMindAskMessage",
     "parent" : "http://vital.ai/ontology/haley#HaleyMindMessage",
     "properties" : {
@@ -1177,10 +1759,10 @@ var haley_0_1_0_schema = {
       "http://vital.ai/ontology/haley#hasHaleyMindContextIdentifier" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital#hasLoginURI" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital#hasLoginURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasBotURI" : {
@@ -1189,7 +1771,7 @@ var haley_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasSessionID" : {
+      "http://vital.ai/ontology/vital-core#hasSessionID" : {
         "type" : "string"
       }
     }
@@ -1205,6 +1787,11 @@ var haley_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/haley#HaleyMindGoal",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyMindInferenceType",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
     }
@@ -1240,6 +1827,27 @@ var haley_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyMindMetaQLQueryOperation",
+    "parent" : "http://vital.ai/ontology/haley#HaleyMindOperation",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasRuleMetaQLQueryName" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyMindOperation",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyMindOperationResult",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyMindOperationURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley#HaleyMindPartialGoal",
     "parent" : "http://vital.ai/ontology/haley#HaleyMindGoal",
     "properties" : {
@@ -1260,6 +1868,14 @@ var haley_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyMindPlanActionInstance",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyMindPlanAction" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley#HaleyMindPlanActionSlot",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
@@ -1271,6 +1887,11 @@ var haley_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/haley#HaleyMindPlanGoalCondition",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyMindPlanInstance",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
     }
@@ -1314,8 +1935,11 @@ var haley_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/haley#HaleyMindProcessorRequest",
-    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "parent" : "http://vital.ai/ontology/haley#HaleyProcessorRequest",
     "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyMindAppURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/haley#hasHaleyMindContextIdentifier" : {
         "type" : "string"
       },
@@ -1353,17 +1977,20 @@ var haley_0_1_0_schema = {
       "http://vital.ai/ontology/haley#hasErrorCode" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/haley#hasErrorMessage" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/haley#hasHaleyMindContextIdentifier" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/haley#hasHaleyMindProcessorResponseTypeURI" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/haley#hasProcessorRequestURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/haley#isStatusOk" : {
         "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital#hasErrorMessage" : {
+        "type" : "string"
       }
     }
   }, {
@@ -1375,6 +2002,9 @@ var haley_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/haley#HaleyMindQuery",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyMindAppURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/haley#hasHaleyMindInferenceQuery" : {
         "type" : "string"
       },
@@ -1436,24 +2066,14 @@ var haley_0_1_0_schema = {
       "http://vital.ai/ontology/haley#hasDoubleAnswerBinding" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/haley#hasGeoLocationAnswerBinding" : {
-        "type" : "object",
-        "properties" : {
-          "longitude" : {
-            "type" : "number"
-          },
-          "latitude" : {
-            "type" : "number"
-          }
-        },
-        "required" : [ "longitude", "latitude" ],
-        "additionalProperties" : false
-      },
       "http://vital.ai/ontology/haley#hasIntegerAnswerBinding" : {
         "type" : "number"
       },
       "http://vital.ai/ontology/haley#hasListBinaryAnswerBinding" : {
-        "type" : "string"
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        }
       },
       "http://vital.ai/ontology/haley#hasListBooleanAnswerBinding" : {
         "type" : "array",
@@ -1473,22 +2093,6 @@ var haley_0_1_0_schema = {
           "type" : "number"
         }
       },
-      "http://vital.ai/ontology/haley#hasListGeoLocationAnswerBinding" : {
-        "type" : "array",
-        "items" : {
-          "type" : "object",
-          "properties" : {
-            "longitude" : {
-              "type" : "number"
-            },
-            "latitude" : {
-              "type" : "number"
-            }
-          },
-          "required" : [ "longitude", "latitude" ],
-          "additionalProperties" : false
-        }
-      },
       "http://vital.ai/ontology/haley#hasListIntegerAnswerBinding" : {
         "type" : "array",
         "items" : {
@@ -1501,12 +2105,6 @@ var haley_0_1_0_schema = {
           "type" : "string"
         }
       },
-      "http://vital.ai/ontology/haley#hasListTruthAnswerBinding" : {
-        "type" : "array",
-        "items" : {
-          "type" : "string"
-        }
-      },
       "http://vital.ai/ontology/haley#hasListURIAnswerBinding" : {
         "type" : "array",
         "items" : {
@@ -1514,9 +2112,6 @@ var haley_0_1_0_schema = {
         }
       },
       "http://vital.ai/ontology/haley#hasStringAnswerBinding" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/haley#hasTruthAnswerBinding" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/haley#hasURIAnswerBinding" : {
@@ -1539,6 +2134,126 @@ var haley_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyMindRequest",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasCommandChildEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorNotificationChannelURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandStartDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyMindAgentInstanceURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartition" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartitionAssignmentList" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandSentDateTime" : {
+        "type" : "number"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyMindResponse",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasAffectedResourceCount" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandStartDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyMindResponseStatusTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasMindResponseStatusMessage" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartition" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartitionAssignmentList" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandSentDateTime" : {
+        "type" : "number"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyMindResponseStatusType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley#HaleyMindRule",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
@@ -1558,6 +2273,9 @@ var haley_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/haley#HaleyMindRuleInvocation",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyMindAppURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/haley#hasInvocationGraphDataManagementTypeURI" : {
         "type" : "string"
       },
@@ -1615,19 +2333,6 @@ var haley_0_1_0_schema = {
       "http://vital.ai/ontology/haley#hasDoubleParameterBinding" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/haley#hasGeoLocationParameterBinding" : {
-        "type" : "object",
-        "properties" : {
-          "longitude" : {
-            "type" : "number"
-          },
-          "latitude" : {
-            "type" : "number"
-          }
-        },
-        "required" : [ "longitude", "latitude" ],
-        "additionalProperties" : false
-      },
       "http://vital.ai/ontology/haley#hasIntegerParameterBinding" : {
         "type" : "number"
       },
@@ -1644,28 +2349,15 @@ var haley_0_1_0_schema = {
         }
       },
       "http://vital.ai/ontology/haley#hasListDateTimeParameterBinding" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/haley#hasListDoubleParameterBinding" : {
         "type" : "array",
         "items" : {
           "type" : "number"
         }
       },
-      "http://vital.ai/ontology/haley#hasListGeoLocationParameterBinding" : {
+      "http://vital.ai/ontology/haley#hasListDoubleParameterBinding" : {
         "type" : "array",
         "items" : {
-          "type" : "object",
-          "properties" : {
-            "longitude" : {
-              "type" : "number"
-            },
-            "latitude" : {
-              "type" : "number"
-            }
-          },
-          "required" : [ "longitude", "latitude" ],
-          "additionalProperties" : false
+          "type" : "number"
         }
       },
       "http://vital.ai/ontology/haley#hasListIntegerParameterBinding" : {
@@ -1675,12 +2367,6 @@ var haley_0_1_0_schema = {
         }
       },
       "http://vital.ai/ontology/haley#hasListStringParameterBinding" : {
-        "type" : "array",
-        "items" : {
-          "type" : "string"
-        }
-      },
-      "http://vital.ai/ontology/haley#hasListTruthParameterBinding" : {
         "type" : "array",
         "items" : {
           "type" : "string"
@@ -1696,9 +2382,6 @@ var haley_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/haley#hasStringParameterBinding" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/haley#hasTruthParameterBinding" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/haley#hasURIParameterBinding" : {
@@ -1746,12 +2429,71 @@ var haley_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyMindTickRequest",
+    "parent" : "http://vital.ai/ontology/haley#HaleyMindRequest",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley#HaleyMindUserEvent",
     "parent" : "http://vital.ai/ontology/haley#HaleyMindEvent",
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyNaturalPlanetarySatellite",
+    "parent" : "http://vital.ai/ontology/haley#HaleyCelestialBody",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyNotification",
+    "parent" : "http://vital.ai/ontology/haley#HaleyRequestMessage",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley#HaleyObjectAccessType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyPermitStreamingResponseMessage",
+    "parent" : "http://vital.ai/ontology/haley#HaleyResponseMessage",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasPermitStreamingTypeURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyPlace",
+    "parent" : "http://vital.ai/ontology/haley#HaleyRegion",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyPlanet",
+    "parent" : "http://vital.ai/ontology/haley#HaleyCelestialBody",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyProcessorRequest",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyProcessorRequestStepName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyProcessorStepTypeURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyProcessorStepType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyProgressStatusType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyProgressUnitType",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
     }
@@ -1762,6 +2504,36 @@ var haley_0_1_0_schema = {
       "http://vital.ai/ontology/vital#hasLoginURI" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyRegion",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasCentroidLatitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCentroidLongitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasRecentRegionPopulation" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasRecentRegionPopulationYear" : {
+        "type" : "number"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyRelayResponseMessage",
+    "parent" : "http://vital.ai/ontology/haley#HaleyResponseMessage",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasResultSequence" : {
+        "type" : "number"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyRelayStatusMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/haley#HaleyReport",
@@ -1781,10 +2553,10 @@ var haley_0_1_0_schema = {
       "http://vital.ai/ontology/haley#hasTeamURI" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital#hasLoginURI" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital#hasLoginURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasBotURI" : {
@@ -1816,7 +2588,7 @@ var haley_0_1_0_schema = {
       "http://vital.ai/ontology/haley#hasResponseChannelURI" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-aimp#hasAccountURI" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
@@ -1832,8 +2604,168 @@ var haley_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyRequestMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#UserCommandMessage",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasCommandChildEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandStartDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartition" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartitionAssignmentList" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandSentDateTime" : {
+        "type" : "number"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley#HaleyRequestResponseType",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyResponseMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#HaleyMessage",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasAffectedResourceCount" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandChildSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandProcessorSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasCommandStartDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyAccessViolationDescription" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyAccessViolationTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyProgressAmount" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyProgressPercentage" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyProgressStatusTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyProgressUnitTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyResponseTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartition" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartitionAssignmentList" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandReceivedDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProcessorCommandSentDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasHaleyStatusMessage" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasHaleyStatusTypeURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyResponseType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyResultMessage",
+    "parent" : "http://vital.ai/ontology/haley#HaleyResponseMessage",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyLimit" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyOffset" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyTotalResults" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasResultSequence" : {
+        "type" : "number"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyStar",
+    "parent" : "http://vital.ai/ontology/haley#HaleyCelestialBody",
     "properties" : {
     }
   }, {
@@ -1869,16 +2801,61 @@ var haley_0_1_0_schema = {
       "http://vital.ai/ontology/haley#hasScheduledExecutionTime" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/haley#hasStatus" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/haley#hasStatusMessage" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/haley#isTopPriority" : {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-aimp#hasStackTrace" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasStatus" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasStatusMessage" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyUSCounty",
+    "parent" : "http://vital.ai/ontology/haley#HaleyRegion",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasDivisionRegionURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasFIPSCode" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyUSPostalRegion",
+    "parent" : "http://vital.ai/ontology/haley#HaleyRegion",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasCountyRegionURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasDivisionRegionURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasFIPSCode" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasPostalCode" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasPostalCodePlusFour" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasTimeZoneIdentifier" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyUSStateOrTerritory",
+    "parent" : "http://vital.ai/ontology/haley#HaleyCountryDivision",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasPostalAbbreviation" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-nlp#hasWikipediaURL" : {
         "type" : "string"
       }
     }
@@ -1890,6 +2867,195 @@ var haley_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital#hasLoginURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyWeatherAlert",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyWeatherAlertCertaintyURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyWeatherAlertSeverityURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherAlertDescription" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherAlertEvent" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherAlertExpiration" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherAlertHeadline" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherAlertOnset" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherAlertSender" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyWeatherAlertCertainty",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyWeatherAlertSeverity",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyWeatherDailyReport",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyWeatherWindCompassDirectionURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyWeatherHourlyReport",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasHaleyWeatherWindCompassDirectionURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyWeatherMinutelyReport",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyWeatherMoonPhase",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyWeatherReport",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasAirQualityIrradiance" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasAirQualityOzone" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasAirQualityUltraVioletIndex" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyWeatherMoonPhaseURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasHaleyWeatherWindCompassDirectionURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherAirPressure" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherCloudCover" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherDewPoint" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherElevation" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherFeelsLikeTemperature" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherHumidity" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherMoonRise" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherMoonSet" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherPrecipitationTotal" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherPrecipitationType" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherReportDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherReportIcon" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherReportIconInteger" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherReportJSON" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherReportLatitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherReportLongitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherReportSummary" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherReportTimeZoneIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherReportUnits" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherSunrise" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherSunset" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherTemperature" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherVisibility" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherWindChill" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWindAngle" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWindDirection" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasWindSpeed" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#isWeatherReportHistorical" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#HaleyWeatherType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasWeatherTypeDescriptor" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherTypeIndex" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherTypeLargeIconPath" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherTypeMediumIconPath" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasWeatherTypeSmallIconPath" : {
         "type" : "string"
       }
     }
@@ -1942,6 +3108,22 @@ var haley_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley#PermitStreamingRequestMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+      "http://vital.ai/ontology/haley#hasPermitStreamingAgentInstallURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasPermitStreamingRequestURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley#PermitStreamingType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley#ProofAnswerType",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
@@ -1965,8 +3147,20 @@ var haley_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/haley#ProofJustificationReason",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/haley#hasProofJustificationGoal" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProofJustificationIteration" : {
+        "type" : "number"
+      },
       "http://vital.ai/ontology/haley#hasProofJustificationReasonTypeURI" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProofJustificationRuleIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProofReasonResult" : {
+        "type" : "boolean"
       },
       "http://vital.ai/ontology/haley#hasReasonComparatorTypeURI" : {
         "type" : "string"
@@ -2004,6 +3198,12 @@ var haley_0_1_0_schema = {
       "http://vital.ai/ontology/haley#hasReasonEncoding" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/haley#hasReasonParse" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        }
+      },
       "http://vital.ai/ontology/haley#hasReasonProvenanceURI" : {
         "type" : "string"
       },
@@ -2035,6 +3235,11 @@ var haley_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley#ProofProgressType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley#ProofSpecialValue",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
@@ -2050,22 +3255,31 @@ var haley_0_1_0_schema = {
     "properties" : {
       "http://vital.ai/ontology/haley#hasProofAnswerTypeURI" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProofConclusionExplanation" : {
+        "type" : "string"
       }
     }
   }, {
     "id" : "http://vital.ai/ontology/haley#ProofTreeAncestorNode",
     "parent" : "http://vital.ai/ontology/haley#ProofTreeNode",
     "properties" : {
+      "http://vital.ai/ontology/haley#hasProofJustificationGoal" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProofJustificationIteration" : {
+        "type" : "number"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/haley#ProofTreeAskNode",
     "parent" : "http://vital.ai/ontology/haley#ProofTreeNode",
     "properties" : {
-      "http://vital.ai/ontology/haley#hasProofTreeAskNodeOriginURIs" : {
-        "type" : "array",
-        "items" : {
-          "type" : "string"
-        }
+      "http://vital.ai/ontology/haley#hasProofJustificationGoal" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProofJustificationIteration" : {
+        "type" : "number"
       }
     }
   }, {
@@ -2073,6 +3287,9 @@ var haley_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/haley#ProofTreeNode",
     "properties" : {
       "http://vital.ai/ontology/haley#hasProofAnswerTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProofConclusionExplanation" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/haley#hasProofDecisionURI" : {
@@ -2089,6 +3306,18 @@ var haley_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/haley#ProofTreeDependencyNode",
     "parent" : "http://vital.ai/ontology/haley#ProofTreeNode",
     "properties" : {
+      "http://vital.ai/ontology/haley#hasProofJustificationGoal" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProofJustificationIteration" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProofTreeDependencyNodeOriginURIs" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        }
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/haley#ProofTreeDeriveNode",
@@ -2101,6 +3330,15 @@ var haley_0_1_0_schema = {
     "properties" : {
       "http://vital.ai/ontology/haley#hasProofJustificationAnswerTypeURI" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProofJustificationGoal" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley#hasProofJustificationIteration" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley#hasProofJustificationResult" : {
+        "type" : "boolean"
       },
       "http://vital.ai/ontology/haley#hasProofJustificationRuleIdentifier" : {
         "type" : "string"
@@ -2119,6 +3357,15 @@ var haley_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/haley#ProofTreeNode",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/haley#hasProofTreeAskNodeOriginURIs" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        }
+      },
+      "http://vital.ai/ontology/haley#hasProofTreeRuleName" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/haley#Seller",
@@ -2204,6 +3451,12 @@ var haley_0_1_0_schema = {
     "shortName" : "accessOutcomeSerialized",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasAccessRightChannelContextURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccessRightContext" ],
+    "shortName" : "accessRightChannelContextURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#hasAccessRoleScopeAccountURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#Edge_hasHaleyAccessAccountRole", "http://vital.ai/ontology/haley#Edge_hasHaleyAccessBotRole", "http://vital.ai/ontology/haley#Edge_hasHaleyAccessLoginRole" ],
@@ -2307,6 +3560,30 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#hasAffectedResourceCount",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage", "http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage" ],
+    "shortName" : "affectedResourceCount",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasAirQualityIrradiance",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "airQualityIrradiance",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasAirQualityOzone",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "airQualityOzone",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasAirQualityUltraVioletIndex",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "airQualityUltraVioletIndex",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#hasAnalyticsDataJSON",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAnalyticsContainer" ],
     "shortName" : "analyticsDataJSON",
@@ -2373,6 +3650,108 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCentroidLatitude",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyRegion" ],
+    "shortName" : "centroidLatitude",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCentroidLongitude",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyRegion" ],
+    "shortName" : "centroidLongitude",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCommandChildEndDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyIntentCommand", "http://vital.ai/ontology/haley#HaleyMindRequest", "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyRequestMessage", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage" ],
+    "shortName" : "commandChildEndDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCommandChildReceivedDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyIntentCommand", "http://vital.ai/ontology/haley#HaleyMindRequest", "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyRequestMessage", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage" ],
+    "shortName" : "commandChildReceivedDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCommandChildSentDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyIntentCommand", "http://vital.ai/ontology/haley#HaleyMindRequest", "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyRequestMessage", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage" ],
+    "shortName" : "commandChildSentDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCommandEndDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage", "http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage" ],
+    "shortName" : "commandEndDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCommandProcessorEndDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyIntentCommand", "http://vital.ai/ontology/haley#HaleyMindRequest", "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyRequestMessage", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage" ],
+    "shortName" : "commandProcessorEndDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCommandProcessorNotificationChannelURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindRequest" ],
+    "shortName" : "commandProcessorNotificationChannelURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCommandProcessorReceivedDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyIntentCommand", "http://vital.ai/ontology/haley#HaleyMindRequest", "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyRequestMessage", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage" ],
+    "shortName" : "commandProcessorReceivedDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCommandProcessorSentDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyIntentCommand", "http://vital.ai/ontology/haley#HaleyMindRequest", "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyRequestMessage", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage" ],
+    "shortName" : "commandProcessorSentDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCommandReceivedDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyIntentCommand", "http://vital.ai/ontology/haley#HaleyMindRequest", "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyRequestMessage", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage", "http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage" ],
+    "shortName" : "commandReceivedDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCommandSentDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyIntentCommand", "http://vital.ai/ontology/haley#HaleyMindRequest", "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyRequestMessage", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage" ],
+    "shortName" : "commandSentDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCommandStartDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyIntentCommand", "http://vital.ai/ontology/haley#HaleyMindRequest", "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyRequestMessage", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage" ],
+    "shortName" : "commandStartDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCompassDirectionLabel",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyCompassDirection" ],
+    "shortName" : "compassDirectionLabel",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCompassDirectionPosition",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyCompassDirection" ],
+    "shortName" : "compassDirectionPosition",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCompassDirectionSymbol",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyCompassDirection" ],
+    "shortName" : "compassDirectionSymbol",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasCountyRegionURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyUSPostalRegion" ],
+    "shortName" : "countyRegionURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#hasDatasetAccessURIs",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
     "shortName" : "datasetAccessURIs",
@@ -2421,6 +3800,12 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#hasDivisionRegionURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyCity", "http://vital.ai/ontology/haley#HaleyUSCounty", "http://vital.ai/ontology/haley#HaleyUSPostalRegion" ],
+    "shortName" : "divisionRegionURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#hasDomainMethodContextType",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyDomainMethod" ],
     "shortName" : "domainMethodContextType",
@@ -2463,12 +3848,6 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "IntegerProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/haley#hasErrorMessage",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindProcessorResponse" ],
-    "shortName" : "errorMessage",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
     "URI" : "http://vital.ai/ontology/haley#hasEventDetails",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAppEvent" ],
     "shortName" : "eventDetails",
@@ -2481,29 +3860,17 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/haley#hasEventType",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAppEvent" ],
-    "shortName" : "eventType",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
     "URI" : "http://vital.ai/ontology/haley#hasExceptionMessage",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyTask" ],
     "shortName" : "exceptionMessage",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/haley#hasGeoLocationAnswerBinding",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindQueryAnswerBinding" ],
-    "shortName" : "geoLocationAnswerBinding",
+    "URI" : "http://vital.ai/ontology/haley#hasFIPSCode",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyUSCounty", "http://vital.ai/ontology/haley#HaleyUSPostalRegion" ],
+    "shortName" : "fIPSCode",
     "multipleValues" : false,
-    "type" : "GeoLocationProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/haley#hasGeoLocationParameterBinding",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindRuleParameterBinding" ],
-    "shortName" : "geoLocationParameterBinding",
-    "multipleValues" : false,
-    "type" : "GeoLocationProperty"
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#hasGraphProxyURIList",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyGraphContainerProxy" ],
@@ -2541,9 +3908,57 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyAccessRightGraphObjectClassURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccessRightGraphObject" ],
+    "shortName" : "haleyAccessRightGraphObjectClassURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyAccessRightMessageClassURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccessRightMessage" ],
+    "shortName" : "haleyAccessRightMessageClassURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyAccessRightMessageDirectionURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#Edge_hasHaleyAccessRightGraphObject", "http://vital.ai/ontology/haley#Edge_hasHaleyAccessRightMessage" ],
+    "shortName" : "haleyAccessRightMessageDirectionURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyAccessRightPropertyClassURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccessRightProperty" ],
+    "shortName" : "haleyAccessRightPropertyClassURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyAccessRightRuleTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccessRightGraphObject", "http://vital.ai/ontology/haley#HaleyAccessRightMessage", "http://vital.ai/ontology/haley#HaleyAccessRightProperty" ],
+    "shortName" : "haleyAccessRightRuleTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyAccessRightTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccessRightGraphObject", "http://vital.ai/ontology/haley#HaleyAccessRightMessage", "http://vital.ai/ontology/haley#HaleyAccessRightProperty" ],
+    "shortName" : "haleyAccessRightTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#hasHaleyAccessRightURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccessGrant" ],
     "shortName" : "haleyAccessRightURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyAccessViolationDescription",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage" ],
+    "shortName" : "haleyAccessViolationDescription",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyAccessViolationTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage" ],
+    "shortName" : "haleyAccessViolationTypeURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
@@ -2553,9 +3968,27 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyCountryISOCode",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyCountry" ],
+    "shortName" : "haleyCountryISOCode",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyLimit",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyResultMessage" ],
+    "shortName" : "haleyLimit",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#hasHaleyMindActionResultTypeURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindActionResult" ],
     "shortName" : "haleyMindActionResultTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyMindAgentInstanceURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindRequest" ],
+    "shortName" : "haleyMindAgentInstanceURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
@@ -2571,6 +4004,12 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyMindAppURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindProcessorRequest", "http://vital.ai/ontology/haley#HaleyMindQuery", "http://vital.ai/ontology/haley#HaleyMindRuleInvocation" ],
+    "shortName" : "haleyMindAppURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#hasHaleyMindContextIdentifier",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindContext", "http://vital.ai/ontology/haley#HaleyMindProcessorRequest", "http://vital.ai/ontology/haley#HaleyMindProcessorResponse" ],
     "shortName" : "haleyMindContextIdentifier",
@@ -2582,6 +4021,18 @@ var haley_0_1_0_schema = {
     "shortName" : "haleyMindInferenceQuery",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyMindOperationURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindOperationResult" ],
+    "shortName" : "haleyMindOperationURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyMindPlanAction",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindPlanActionInstance" ],
+    "shortName" : "haleyMindPlanAction",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#hasHaleyMindPlanRequestTypeURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindPlanRequest" ],
@@ -2637,6 +4088,12 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyMindResponseStatusTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindResponse" ],
+    "shortName" : "haleyMindResponseStatusTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#hasHaleyMindServiceMetaQLName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindProcessorRequest" ],
     "shortName" : "haleyMindServiceMetaQLName",
@@ -2658,6 +4115,84 @@ var haley_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/haley#hasHaleyMindServiceRuleURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindProcessorRequest" ],
     "shortName" : "haleyMindServiceRuleURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyOffset",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyResultMessage" ],
+    "shortName" : "haleyOffset",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyProcessorRequestStepName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyProcessorRequest" ],
+    "shortName" : "haleyProcessorRequestStepName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyProcessorStepTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyProcessorRequest" ],
+    "shortName" : "haleyProcessorStepTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyProgressAmount",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyResponseMessage" ],
+    "shortName" : "haleyProgressAmount",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyProgressPercentage",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyResponseMessage" ],
+    "shortName" : "haleyProgressPercentage",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyProgressStatusTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyResponseMessage" ],
+    "shortName" : "haleyProgressStatusTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyProgressUnitTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyResponseMessage" ],
+    "shortName" : "haleyProgressUnitTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyResponseTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage", "http://vital.ai/ontology/vital-aimp#MetaQLResultsMessage" ],
+    "shortName" : "haleyResponseTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyTotalResults",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyResultMessage" ],
+    "shortName" : "haleyTotalResults",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyWeatherAlertCertaintyURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherAlert" ],
+    "shortName" : "haleyWeatherAlertCertaintyURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyWeatherAlertSeverityURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherAlert" ],
+    "shortName" : "haleyWeatherAlertSeverityURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyWeatherMoonPhaseURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "haleyWeatherMoonPhaseURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasHaleyWeatherWindCompassDirectionURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherDailyReport", "http://vital.ai/ontology/haley#HaleyWeatherHourlyReport", "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "haleyWeatherWindCompassDirectionURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
@@ -2696,6 +4231,96 @@ var haley_0_1_0_schema = {
     "shortName" : "integerParameterBinding",
     "multipleValues" : false,
     "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasInterAccountDestinationChannelURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyInterAccountRecord" ],
+    "shortName" : "interAccountDestinationChannelURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasInterAccountRecipientAccountURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyInterAccountRecord" ],
+    "shortName" : "interAccountRecipientAccountURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasInterAccountRecipientLoginURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyInterAccountRecord" ],
+    "shortName" : "interAccountRecipientLoginURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasInterAccountReplyMessageURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyInterAccountRecord" ],
+    "shortName" : "interAccountReplyMessageURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasInterAccountRequestDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyInterAccountRecord" ],
+    "shortName" : "interAccountRequestDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasInterAccountRequestURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyInterAccountRecord" ],
+    "shortName" : "interAccountRequestURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasInterAccountResponseDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyInterAccountRecord" ],
+    "shortName" : "interAccountResponseDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasInterAccountResponseStatusURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyInterAccountRecord" ],
+    "shortName" : "interAccountResponseStatusURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasInterAccountResponseURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyInterAccountRecord" ],
+    "shortName" : "interAccountResponseURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasInterAccountSenderAccountURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyInterAccountRecord" ],
+    "shortName" : "interAccountSenderAccountURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasInterAccountSenderLoginURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyInterAccountRecord" ],
+    "shortName" : "interAccountSenderLoginURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasInterAccountSenderMessageURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyInterAccountRecord" ],
+    "shortName" : "interAccountSenderMessageURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasInterAccountSerializedRequest",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyInterAccountRecord" ],
+    "shortName" : "interAccountSerializedRequest",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasInterAccountSerializedResponse",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyInterAccountRecord" ],
+    "shortName" : "interAccountSerializedResponse",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasInterAccountSourceChannelURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyInterAccountRecord" ],
+    "shortName" : "interAccountSourceChannelURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#hasInvocationGraphDataManagementTypeURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindRuleInvocation" ],
@@ -2736,7 +4361,7 @@ var haley_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/haley#hasListBinaryAnswerBinding",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindQueryAnswerBinding" ],
     "shortName" : "listBinaryAnswerBinding",
-    "multipleValues" : false,
+    "multipleValues" : true,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#hasListBinaryParameterBinding",
@@ -2766,7 +4391,7 @@ var haley_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/haley#hasListDateTimeParameterBinding",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindRuleParameterBinding" ],
     "shortName" : "listDateTimeParameterBinding",
-    "multipleValues" : false,
+    "multipleValues" : true,
     "type" : "DateProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#hasListDoubleAnswerBinding",
@@ -2780,18 +4405,6 @@ var haley_0_1_0_schema = {
     "shortName" : "listDoubleParameterBinding",
     "multipleValues" : true,
     "type" : "DoubleProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/haley#hasListGeoLocationAnswerBinding",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindQueryAnswerBinding" ],
-    "shortName" : "listGeoLocationAnswerBinding",
-    "multipleValues" : true,
-    "type" : "GeoLocationProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/haley#hasListGeoLocationParameterBinding",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindRuleParameterBinding" ],
-    "shortName" : "listGeoLocationParameterBinding",
-    "multipleValues" : true,
-    "type" : "GeoLocationProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#hasListIntegerAnswerBinding",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindQueryAnswerBinding" ],
@@ -2816,18 +4429,6 @@ var haley_0_1_0_schema = {
     "shortName" : "listStringParameterBinding",
     "multipleValues" : true,
     "type" : "StringProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/haley#hasListTruthAnswerBinding",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindQueryAnswerBinding" ],
-    "shortName" : "listTruthAnswerBinding",
-    "multipleValues" : true,
-    "type" : "TruthProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/haley#hasListTruthParameterBinding",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindRuleParameterBinding" ],
-    "shortName" : "listTruthParameterBinding",
-    "multipleValues" : true,
-    "type" : "TruthProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#hasListURIAnswerBinding",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindQueryAnswerBinding" ],
@@ -2889,6 +4490,12 @@ var haley_0_1_0_schema = {
     "multipleValues" : true,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#hasMindResponseStatusMessage",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindResponse" ],
+    "shortName" : "mindResponseStatusMessage",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#hasNormalizedText",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyDialogMapping" ],
     "shortName" : "normalizedText",
@@ -2901,9 +4508,69 @@ var haley_0_1_0_schema = {
     "multipleValues" : true,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#hasOfficeLocationAddressCity",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccountOfficeLocation" ],
+    "shortName" : "officeLocationAddressCity",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasOfficeLocationAddressCountry",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccountOfficeLocation" ],
+    "shortName" : "officeLocationAddressCountry",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasOfficeLocationAddressCounty",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccountOfficeLocation" ],
+    "shortName" : "officeLocationAddressCounty",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasOfficeLocationAddressLine1",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccountOfficeLocation" ],
+    "shortName" : "officeLocationAddressLine1",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasOfficeLocationAddressLine2",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccountOfficeLocation" ],
+    "shortName" : "officeLocationAddressLine2",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasOfficeLocationAddressPostalCode",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccountOfficeLocation" ],
+    "shortName" : "officeLocationAddressPostalCode",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasOfficeLocationAddressProvince",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccountOfficeLocation" ],
+    "shortName" : "officeLocationAddressProvince",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasOfficeLocationAddressState",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccountOfficeLocation" ],
+    "shortName" : "officeLocationAddressState",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#hasOfficeURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyReportInstance" ],
     "shortName" : "officeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasOriginDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "shortName" : "originDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasOriginURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "shortName" : "originURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
@@ -2919,11 +4586,101 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#hasPayloadMessageURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "shortName" : "payloadMessageURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasPermitStreamingAgentInstallURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#PermitStreamingRequestMessage" ],
+    "shortName" : "permitStreamingAgentInstallURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasPermitStreamingRequestURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#PermitStreamingRequestMessage" ],
+    "shortName" : "permitStreamingRequestURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasPermitStreamingTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyPermitStreamingResponseMessage" ],
+    "shortName" : "permitStreamingTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasPostalAbbreviation",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyCanadianProvinceOrTerritory", "http://vital.ai/ontology/haley#HaleyUSStateOrTerritory" ],
+    "shortName" : "postalAbbreviation",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasPostalCode",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyUSPostalRegion" ],
+    "shortName" : "postalCode",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasPostalCodePlusFour",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyUSPostalRegion" ],
+    "shortName" : "postalCodePlusFour",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasProcessorCommandConsumerID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyIntentCommand", "http://vital.ai/ontology/haley#HaleyMindRequest", "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyRequestMessage", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage" ],
+    "shortName" : "processorCommandConsumerID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartition",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyIntentCommand", "http://vital.ai/ontology/haley#HaleyMindRequest", "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyRequestMessage", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage" ],
+    "shortName" : "processorCommandConsumerPartition",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartitionAssignmentList",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyIntentCommand", "http://vital.ai/ontology/haley#HaleyMindRequest", "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyRequestMessage", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage" ],
+    "shortName" : "processorCommandConsumerPartitionAssignmentList",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasProcessorCommandEndDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyIntentCommand", "http://vital.ai/ontology/haley#HaleyMindRequest", "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyRequestMessage", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage" ],
+    "shortName" : "processorCommandEndDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasProcessorCommandReceivedDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyIntentCommand", "http://vital.ai/ontology/haley#HaleyMindRequest", "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyRequestMessage", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage" ],
+    "shortName" : "processorCommandReceivedDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasProcessorCommandSentDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyIntentCommand", "http://vital.ai/ontology/haley#HaleyMindRequest", "http://vital.ai/ontology/haley#HaleyMindResponse", "http://vital.ai/ontology/haley#HaleyRequestMessage", "http://vital.ai/ontology/haley#HaleyResponseMessage", "http://vital.ai/ontology/vital-aimp#HaleyStatusMessage", "http://vital.ai/ontology/vital-aimp#InterAccountMessage" ],
+    "shortName" : "processorCommandSentDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasProcessorRequestURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindProcessorResponse" ],
+    "shortName" : "processorRequestURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#hasProofAnswerTypeURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofTree", "http://vital.ai/ontology/haley#ProofTreeConclusionNode" ],
     "shortName" : "proofAnswerTypeURI",
     "multipleValues" : false,
     "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasProofConclusionExplanation",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofTree", "http://vital.ai/ontology/haley#ProofTreeConclusionNode" ],
+    "shortName" : "proofConclusionExplanation",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#hasProofDecisionURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofTreeConclusionNode" ],
@@ -2937,14 +4694,32 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#hasProofJustificationGoal",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofJustificationReason", "http://vital.ai/ontology/haley#ProofTreeAncestorNode", "http://vital.ai/ontology/haley#ProofTreeAskNode", "http://vital.ai/ontology/haley#ProofTreeDependencyNode", "http://vital.ai/ontology/haley#ProofTreeJustificationNode" ],
+    "shortName" : "proofJustificationGoal",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasProofJustificationIteration",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofJustificationReason", "http://vital.ai/ontology/haley#ProofTreeAncestorNode", "http://vital.ai/ontology/haley#ProofTreeAskNode", "http://vital.ai/ontology/haley#ProofTreeDependencyNode", "http://vital.ai/ontology/haley#ProofTreeJustificationNode" ],
+    "shortName" : "proofJustificationIteration",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#hasProofJustificationReasonTypeURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofJustificationReason" ],
     "shortName" : "proofJustificationReasonTypeURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/haley#hasProofJustificationRuleIdentifier",
+    "URI" : "http://vital.ai/ontology/haley#hasProofJustificationResult",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofTreeJustificationNode" ],
+    "shortName" : "proofJustificationResult",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasProofJustificationRuleIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofJustificationReason", "http://vital.ai/ontology/haley#ProofTreeJustificationNode" ],
     "shortName" : "proofJustificationRuleIdentifier",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -2967,6 +4742,12 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#hasProofReasonResult",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofJustificationReason" ],
+    "shortName" : "proofReasonResult",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#hasProofTertiaryGoalURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofTreeConclusionNode" ],
     "shortName" : "proofTertiaryGoalURI",
@@ -2974,8 +4755,14 @@ var haley_0_1_0_schema = {
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#hasProofTreeAskNodeOriginURIs",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofTreeAskNode" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofTreeNode" ],
     "shortName" : "proofTreeAskNodeOriginURIs",
+    "multipleValues" : true,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasProofTreeDependencyNodeOriginURIs",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofTreeDependencyNode" ],
+    "shortName" : "proofTreeDependencyNodeOriginURIs",
     "multipleValues" : true,
     "type" : "URIProperty"
   }, {
@@ -2984,6 +4771,12 @@ var haley_0_1_0_schema = {
     "shortName" : "proofTreeNodeIndex",
     "multipleValues" : false,
     "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasProofTreeRuleName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofTreeNode" ],
+    "shortName" : "proofTreeRuleName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#hasQueryToRuleURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindQuery" ],
@@ -3063,6 +4856,12 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#hasReasonParse",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofJustificationReason" ],
+    "shortName" : "reasonParse",
+    "multipleValues" : true,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#hasReasonProvenanceURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#ProofJustificationReason" ],
     "shortName" : "reasonProvenanceURI",
@@ -3080,6 +4879,18 @@ var haley_0_1_0_schema = {
     "shortName" : "reasonReferenceTimestamp",
     "multipleValues" : false,
     "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasRecentRegionPopulation",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyRegion" ],
+    "shortName" : "recentRegionPopulation",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasRecentRegionPopulationYear",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyRegion" ],
+    "shortName" : "recentRegionPopulationYear",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#hasReferenceURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
@@ -3147,11 +4958,23 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#hasRespondingToClassURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "shortName" : "respondingToClassURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#hasResponseChannelURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyRequest" ],
     "shortName" : "responseChannelURI",
     "multipleValues" : false,
     "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasResultSequence",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyRelayResponseMessage", "http://vital.ai/ontology/haley#HaleyResultMessage" ],
+    "shortName" : "resultSequence",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#hasRoleGrantAspectURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#Edge_hasHaleyAccessRight", "http://vital.ai/ontology/haley#HaleyAccessGrant" ],
@@ -3190,7 +5013,7 @@ var haley_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#hasRuleMetaQLQueryName",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindMetaQLDataset" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindMetaQLDataset", "http://vital.ai/ontology/haley#HaleyMindMetaQLQueryOperation" ],
     "shortName" : "ruleMetaQLQueryName",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -3273,18 +5096,6 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "DateProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/haley#hasStatus",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyTask" ],
-    "shortName" : "status",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/haley#hasStatusMessage",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyTask" ],
-    "shortName" : "statusMessage",
-    "multipleValues" : false,
-    "type" : "StringProperty"
-  }, {
     "URI" : "http://vital.ai/ontology/haley#hasStringAnswerBinding",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindQueryAnswerBinding" ],
     "shortName" : "stringAnswerBinding",
@@ -3333,17 +5144,11 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/haley#hasTruthAnswerBinding",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindQueryAnswerBinding" ],
-    "shortName" : "truthAnswerBinding",
+    "URI" : "http://vital.ai/ontology/haley#hasTimeZoneIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyUSPostalRegion" ],
+    "shortName" : "timeZoneIdentifier",
     "multipleValues" : false,
-    "type" : "TruthProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/haley#hasTruthParameterBinding",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindRuleParameterBinding" ],
-    "shortName" : "truthParameterBinding",
-    "multipleValues" : false,
-    "type" : "TruthProperty"
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#hasURIAnswerBinding",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindQueryAnswerBinding" ],
@@ -3357,6 +5162,216 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherAirPressure",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherAirPressure",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherAlertDescription",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherAlert" ],
+    "shortName" : "weatherAlertDescription",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherAlertEvent",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherAlert" ],
+    "shortName" : "weatherAlertEvent",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherAlertExpiration",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherAlert" ],
+    "shortName" : "weatherAlertExpiration",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherAlertHeadline",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherAlert" ],
+    "shortName" : "weatherAlertHeadline",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherAlertOnset",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherAlert" ],
+    "shortName" : "weatherAlertOnset",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherAlertSender",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherAlert" ],
+    "shortName" : "weatherAlertSender",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherCloudCover",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherCloudCover",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherDewPoint",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherDewPoint",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherElevation",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherElevation",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherFeelsLikeTemperature",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherFeelsLikeTemperature",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherHumidity",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherHumidity",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherMoonRise",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherMoonRise",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherMoonSet",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherMoonSet",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherPrecipitationTotal",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherPrecipitationTotal",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherPrecipitationType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherPrecipitationType",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherReportDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherReportDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherReportIcon",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherReportIcon",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherReportIconInteger",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherReportIconInteger",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherReportJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherReportJSON",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherReportLatitude",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherReportLatitude",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherReportLongitude",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherReportLongitude",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherReportSummary",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherReportSummary",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherReportTimeZoneIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherReportTimeZoneIdentifier",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherReportUnits",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherReportUnits",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherSunrise",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherSunrise",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherSunset",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherSunset",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherTemperature",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherTemperature",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherTypeDescriptor",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherType" ],
+    "shortName" : "weatherTypeDescriptor",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherTypeIndex",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherType" ],
+    "shortName" : "weatherTypeIndex",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherTypeLargeIconPath",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherType" ],
+    "shortName" : "weatherTypeLargeIconPath",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherTypeMediumIconPath",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherType" ],
+    "shortName" : "weatherTypeMediumIconPath",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherTypeSmallIconPath",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherType" ],
+    "shortName" : "weatherTypeSmallIconPath",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherVisibility",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherVisibility",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWeatherWindChill",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherWindChill",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#hasWikiDataID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Node" ],
     "shortName" : "wikiDataID",
@@ -3368,6 +5383,24 @@ var haley_0_1_0_schema = {
     "shortName" : "wikiURL",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWindAngle",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "windAngle",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWindDirection",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "windDirection",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#hasWindSpeed",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "windSpeed",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley#isEnableEcho",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyAccount" ],
@@ -3387,6 +5420,12 @@ var haley_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley#isHaleyTestCase",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital#Account", "http://vital.ai/ontology/vital#Login" ],
+    "shortName" : "haleyTestCase",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley#isStatusOk",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyMindProcessorResponse" ],
     "shortName" : "statusOk",
@@ -3396,6 +5435,12 @@ var haley_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/haley#isTopPriority",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyTask" ],
     "shortName" : "topPriority",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley#isWeatherReportHistorical",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley#HaleyWeatherReport" ],
+    "shortName" : "weatherReportHistorical",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   } ]
