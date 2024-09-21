@@ -27,6 +27,3 @@ class Edge_hasKGIndexDocumentFileNode(VITAL_PeerEdge):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley-ai-kg#Edge_hasKGIndexDocumentFileNode'
 
-ls) -> str:
-        return 'http://vital.ai/ontology/haley-ai-kg#Edge_hasKGIndexDocumentFileNode'
-

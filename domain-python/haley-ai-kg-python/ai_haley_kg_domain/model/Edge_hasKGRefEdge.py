@@ -26,7 +26,3 @@ class Edge_hasKGRefEdge(VITAL_PeerEdge):
     @classmethod
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley-ai-kg#Edge_hasKGRefEdge'
-
-et_class_uri(cls) -> str:
-        return 'http://vital.ai/ontology/haley-ai-kg#Edge_hasKGRefEdge'
-

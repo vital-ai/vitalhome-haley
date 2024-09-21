@@ -7,6 +7,3 @@ class Edge_hasKGIndexDocumentFileNode(VITAL_PeerEdge):
         kGIdentifier: str
         kGJSON: str
 
-tr
-        kGJSON: str
-

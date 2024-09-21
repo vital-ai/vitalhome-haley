@@ -21,5 +21,3 @@ class KGNode(VITAL_Node):
         kGVisualStyleJSON: str
         kGraphDescription: str
 
-kGraphDescription: str
-

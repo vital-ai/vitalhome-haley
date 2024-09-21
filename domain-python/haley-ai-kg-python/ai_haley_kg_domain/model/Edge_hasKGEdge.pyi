@@ -19,5 +19,3 @@ class Edge_hasKGEdge(VITAL_PeerEdge):
         kGVisualStyleJSON: str
         kGraphDescription: str
 
-kGraphDescription: str
-
