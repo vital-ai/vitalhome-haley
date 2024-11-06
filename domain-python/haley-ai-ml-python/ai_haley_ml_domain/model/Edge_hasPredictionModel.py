@@ -25,4 +25,3 @@ class Edge_hasPredictionModel(VITAL_TaxonomyEdge):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley-ai-ml#Edge_hasPredictionModel'
 
-
