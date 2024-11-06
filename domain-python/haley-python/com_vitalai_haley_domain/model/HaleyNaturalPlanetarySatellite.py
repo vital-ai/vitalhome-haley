@@ -25,4 +25,3 @@ class HaleyNaturalPlanetarySatellite(HaleyCelestialBody):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley#HaleyNaturalPlanetarySatellite'
 
-

@@ -26,4 +26,3 @@ class Edge_hasHaleyAccessRightGraphObject(VITAL_PeerEdge):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley#Edge_hasHaleyAccessRightGraphObject'
 
-

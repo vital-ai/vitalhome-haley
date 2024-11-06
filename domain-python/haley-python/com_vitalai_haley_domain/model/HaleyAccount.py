@@ -26,4 +26,3 @@ class HaleyAccount(Account):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley#HaleyAccount'
 
-

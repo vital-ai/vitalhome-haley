@@ -25,4 +25,3 @@ class HaleyChannelQuestion(QuestionMessage):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley#HaleyChannelQuestion'
 
-

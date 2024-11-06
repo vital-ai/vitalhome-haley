@@ -25,4 +25,3 @@ class HyperEdge_hasHaleyMindRuleGraphMembership(VITAL_HyperEdge):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley#HyperEdge_hasHaleyMindRuleGraphMembership'
 
-

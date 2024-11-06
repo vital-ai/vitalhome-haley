@@ -25,4 +25,3 @@ class HaleyMailingList(VITAL_Node):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley#HaleyMailingList'
 
-

@@ -14,6 +14,7 @@ class HaleyMindRequest(VITAL_Node):
         commandReceivedDateTime: datetime
         commandSentDateTime: datetime
         commandStartDateTime: datetime
+        haleyMindAgentInstanceURI: str
         processorCommandConsumerID: str
         processorCommandConsumerPartition: str
         processorCommandConsumerPartitionAssignmentList: str

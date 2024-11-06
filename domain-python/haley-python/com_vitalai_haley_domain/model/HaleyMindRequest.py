@@ -25,6 +25,7 @@ class HaleyMindRequest(VITAL_Node):
         {'uri': 'http://vital.ai/ontology/haley#hasCommandReceivedDateTime', 'prop_class': DateTimeProperty}, 
         {'uri': 'http://vital.ai/ontology/haley#hasCommandSentDateTime', 'prop_class': DateTimeProperty}, 
         {'uri': 'http://vital.ai/ontology/haley#hasCommandStartDateTime', 'prop_class': DateTimeProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley#hasHaleyMindAgentInstanceURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley#hasProcessorCommandConsumerID', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartition', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley#hasProcessorCommandConsumerPartitionAssignmentList', 'prop_class': StringProperty}, 
@@ -40,5 +41,4 @@ class HaleyMindRequest(VITAL_Node):
     @classmethod
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley#HaleyMindRequest'
-
 

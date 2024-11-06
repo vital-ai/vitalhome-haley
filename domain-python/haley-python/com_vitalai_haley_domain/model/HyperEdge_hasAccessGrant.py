@@ -32,4 +32,3 @@ class HyperEdge_hasAccessGrant(VITAL_HyperEdge):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley#HyperEdge_hasAccessGrant'
 
-

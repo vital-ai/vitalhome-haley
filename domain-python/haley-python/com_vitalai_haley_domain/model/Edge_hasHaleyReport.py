@@ -25,4 +25,3 @@ class Edge_hasHaleyReport(VITAL_PeerEdge):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley#Edge_hasHaleyReport'
 
-
