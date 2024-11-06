@@ -21,7 +21,7 @@ setup(
     },
     license='Apache License 2.0',
     install_requires=[
-        'vital-ai-haley>=0.1.5'
+        'vital-ai-haley>=0.1.6'
     ],
     classifiers=[
         "Programming Language :: Python :: 3.10",
