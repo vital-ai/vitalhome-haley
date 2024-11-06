@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='vital-ai-haley-taxonomy',
-    version='0.1.5',
+    version='0.1.6',
     author='Marc Hadfield',
     author_email='marc@vital.ai',
     description='VitalSigns haley taxonomy domain',
