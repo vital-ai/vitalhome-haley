@@ -25,4 +25,3 @@ class HaleyBooleanAnswer(HaleyAnswer):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley-ai-question#HaleyBooleanAnswer'
 
-

@@ -25,4 +25,3 @@ class Edge_hasIncludeSectionDependency(VITAL_PeerEdge):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley-ai-question#Edge_hasIncludeSectionDependency'
 
-
