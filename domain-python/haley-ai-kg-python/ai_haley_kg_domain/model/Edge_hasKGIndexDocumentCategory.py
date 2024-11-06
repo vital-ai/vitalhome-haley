@@ -26,3 +26,4 @@ class Edge_hasKGIndexDocumentCategory(VITAL_PeerEdge):
     @classmethod
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley-ai-kg#Edge_hasKGIndexDocumentCategory'
+

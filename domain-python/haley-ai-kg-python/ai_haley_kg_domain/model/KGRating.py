@@ -33,4 +33,3 @@ class KGRating(KGNode):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley-ai-kg#KGRating'
 
-

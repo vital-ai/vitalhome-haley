@@ -16,6 +16,7 @@ from vital_ai_vitalsigns.model.VITAL_Node import VITAL_Node
 class KGQuery(VITAL_Node):
     _allowed_properties = [
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGQueryIdentifier', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGQueryJSON', 'prop_class': StringProperty}, 
     ]
 
     @classmethod
@@ -25,5 +26,4 @@ class KGQuery(VITAL_Node):
     @classmethod
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley-ai-kg#KGQuery'
-
 

@@ -25,4 +25,3 @@ class Edge_hasRecipientEntityKGEmail(Edge_hasKGEdge):
     def get_class_uri(cls) -> str:
         return 'http://vital.ai/ontology/haley-ai-kg#Edge_hasRecipientEntityKGEmail'
 
-
