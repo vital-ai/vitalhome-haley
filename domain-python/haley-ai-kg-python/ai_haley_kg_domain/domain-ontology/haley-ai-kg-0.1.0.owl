@@ -1148,6 +1148,26 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGRefEdgeURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGRefEdgeURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Edge"/>
+        <rdfs:comment>The equivalent of hasKGRefURI for Edges.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley-ai-kg#hasKGRefURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGRefURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley-ai-kg#KGNode"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+        <rdfs:comment>Used to link a node published in the KG to a corresponding node not in the KG.  As example, and Agent in the service database may be publish as a KGAgent in the KG, and this allows the KJG to refer back to the source data.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/haley-ai-kg#hasKGRelatedCategoryType -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley-ai-kg#hasKGRelatedCategoryType">

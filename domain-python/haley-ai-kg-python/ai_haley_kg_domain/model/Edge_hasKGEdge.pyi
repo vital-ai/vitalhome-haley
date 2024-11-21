@@ -13,6 +13,7 @@ class Edge_hasKGEdge(VITAL_PeerEdge):
         kGIndexStatusURI: str
         kGJSON: str
         kGModelVersion: str
+        kGRefEdgeURI: str
         kGTenantIdentifier: str
         kGValidTypeURI: str
         kGVersion: str

@@ -15,6 +15,7 @@ class KGNode(VITAL_Node):
         kGJSON: str
         kGModelVersion: str
         kGNodeCacheDateTime: datetime
+        kGRefURI: str
         kGTenantIdentifier: str
         kGValidTypeURI: str
         kGVersion: str
