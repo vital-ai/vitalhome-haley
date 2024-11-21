@@ -6,13 +6,16 @@ var vital_aimp_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-aimp",
   "name" : "vital-aimp-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "3e57995eb6038f1f5dbbf6c8203a858c",
+  "domainOWLHash" : "df9b6ae28779655150b2360da74ba200",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/vital-social" ],
   "schemas" : [ {
     "extends" : "http://vital.ai/ontology/vital#Account",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasAccountStatusURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasJwtProviderIdentifier" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasSingleSignOnProviderURI" : {
@@ -455,6 +458,15 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasBotURI" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasChannelHistoryItem" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        }
+      },
+      "http://vital.ai/ontology/vital-aimp#hasChannelHistoryListJSON" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
         "type" : "string"
       },
@@ -495,6 +507,21 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasIpAddress" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasJweEncryptedString" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasJweKeyIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasJwtEncodedString" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasJwtJSON" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasJwtKeyIdentifier" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasKeyHash" : {
         "type" : "string"
       },
@@ -531,6 +558,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasRecipientIdentity" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasReplyChannelURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
@@ -547,6 +577,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasSourceAccountURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSourceRequestURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasSourceUserID" : {
@@ -614,17 +647,96 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital#hasLoginURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAIMPMessageContainerTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasDestinationAccountName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasDestinationAccountURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasRecipientIdentity" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSenderIdentity" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasSerializedMessage" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSourceAccountName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSourceAccountURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSourceUserID" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSourceUserName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isReplyTo" : {
+        "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AIMPMessageContainerType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AIMPMessageContent",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital#hasAccountURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital#hasLoginURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasChannelURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasEncodedVoiceData" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasGeneratedAccumulatedText" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasGeneratedText" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasGeoAPIJSON" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasMessageContentJSON" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasText" : {
         "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasSessionID" : {
+        "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AIMPMessageContentType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AIMPMessageDef",
@@ -659,6 +771,71 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasAIMPIntentType" : {
         "type" : "string"
       }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AIMPTask",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAIMPTaskProgressURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAIMPTaskStatusURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasAIMPTaskTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasChatCompletionTokenCount" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasChatPromptTokenCount" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasChatTaskDeltaTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasChatTaskEndDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasChatTaskStagesJSON" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasChatTaskStartDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasChatTaskUpdateDateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasChatTotalTokenCount" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasMessageURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasTimezone" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isDaylightSavingsTime" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AIMPTaskProgress",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AIMPTaskStatus",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AIMPTaskType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AIMPThing",
@@ -970,6 +1147,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasScriptName" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasSourceRequestURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasStatus" : {
         "type" : "string"
       },
@@ -1164,6 +1344,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#AgentMessageContent",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessageContent",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasMessageAgentInstallURI" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AgentMessagePayloadType",
@@ -1189,6 +1372,9 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasSourceRequestURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-core#hasSessionID" : {
@@ -1224,6 +1410,9 @@ var vital_aimp_0_1_0_schema = {
       "http://vital.ai/ontology/vital-aimp#hasRequestURI" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-aimp#hasSourceRequestURI" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasStatus" : {
         "type" : "string"
       },
@@ -1249,6 +1438,11 @@ var vital_aimp_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#AgentType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#AgentVariant",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
     }
@@ -1872,10 +2066,21 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#CallingAgentMessageContent",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessageContent",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasMessageAgentInstallURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#CancelCommandMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#UserCommandMessage",
     "properties" : {
       "http://vital.ai/ontology/vital-aimp#hasCancelCommandMessageURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasCancelCommandObjectURI" : {
         "type" : "string"
       }
     }
@@ -1883,6 +2088,12 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#Card",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasCardText" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-aimp#hasIndex" : {
         "type" : "number"
       },
@@ -3699,6 +3910,20 @@ var vital_aimp_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasJWEPubKey",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#JWEPubKey" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasJWTPubKey",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-aimp#JWTPubKey" ],
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#Edge_hasLinkedCustomer",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
@@ -4957,6 +5182,9 @@ var vital_aimp_0_1_0_schema = {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleyRealtimeMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasServerSentEventJSON" : {
+        "type" : "string"
+      }
     }
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#HaleySearchResultsMessage",
@@ -5373,6 +5601,63 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#JWEPubKey",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasJweKeyIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasJweProviderIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasJwePubKeyString" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#JWTContainer",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasJweEncryptedString" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasJweKeyIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasJweProviderIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasJwtEncodedString" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasJwtJSON" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasJwtKeyIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasJwtProviderIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isJwtVerified" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#JWTPubKey",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasJwtKeyIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasJwtProviderIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasJwtPubKeyString" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#JiboDevice",
     "parent" : "http://vital.ai/ontology/vital-aimp#RobotDevice",
     "properties" : {
@@ -5516,6 +5801,16 @@ var vital_aimp_0_1_0_schema = {
   }, {
     "id" : "http://vital.ai/ontology/vital-aimp#ListEndpointProfilesMessage",
     "parent" : "http://vital.ai/ontology/vital-aimp#EndpointProfileMessage",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#ListEndpointsRequestMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#ListEndpointsResponseMessage",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessage",
     "properties" : {
     }
   }, {
@@ -6542,6 +6837,14 @@ var vital_aimp_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-aimp#hasQuestionURI" : {
+        "type" : "string"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#RespondingAgentMessageContent",
+    "parent" : "http://vital.ai/ontology/vital-aimp#AIMPMessageContent",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasMessageAgentInstallURI" : {
         "type" : "string"
       }
     }
@@ -7611,6 +7914,40 @@ var vital_aimp_0_1_0_schema = {
       }
     }
   }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#WebEndpoint",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasColor" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasGreetingText" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isCustomerServiceEnabled" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isOpenInitially" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/vital-aimp#WebFrameEndpoint",
+    "parent" : "http://vital.ai/ontology/vital-aimp#Endpoint",
+    "properties" : {
+      "http://vital.ai/ontology/vital-aimp#hasColor" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#hasGreetingText" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-aimp#isCustomerServiceEnabled" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-aimp#isOpenInitially" : {
+        "type" : "boolean"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/vital-aimp#WebviewCard",
     "parent" : "http://vital.ai/ontology/vital-aimp#Card",
     "properties" : {
@@ -7671,6 +8008,42 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasAIMPIntentType",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPIntent", "http://vital.ai/ontology/vital-aimp#AIMPResponseMessage" ],
     "shortName" : "aIMPIntentType",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAIMPMessageContainerTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer" ],
+    "shortName" : "aIMPMessageContainerTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessageContent" ],
+    "shortName" : "aIMPMessageContentTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask", "http://vital.ai/ontology/vital-aimp#Card" ],
+    "shortName" : "aIMPMessageContentURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAIMPTaskProgressURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask" ],
+    "shortName" : "aIMPTaskProgressURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAIMPTaskStatusURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask" ],
+    "shortName" : "aIMPTaskStatusURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasAIMPTaskTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask" ],
+    "shortName" : "aIMPTaskTypeURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
@@ -8215,9 +8588,21 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasCancelCommandObjectURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#CancelCommandMessage" ],
+    "shortName" : "cancelCommandObjectURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasCardHeader",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ThingCard" ],
     "shortName" : "cardHeader",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasCardText",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Card" ],
+    "shortName" : "cardText",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -8245,6 +8630,18 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasChannelHistoryItem",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "shortName" : "channelHistoryItem",
+    "multipleValues" : true,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasChannelHistoryListJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "shortName" : "channelHistoryListJSON",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasChannelTypeURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Channel" ],
     "shortName" : "channelTypeURI",
@@ -8252,7 +8649,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasChannelURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AgentObject", "http://vital.ai/ontology/vital-aimp#Task" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer", "http://vital.ai/ontology/vital-aimp#AIMPMessageContent", "http://vital.ai/ontology/vital-aimp#AgentObject", "http://vital.ai/ontology/vital-aimp#Task" ],
     "shortName" : "channelURI",
     "multipleValues" : false,
     "type" : "URIProperty"
@@ -8293,6 +8690,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasChatCompletionTokenCount",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask" ],
+    "shortName" : "chatCompletionTokenCount",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasChatMessage",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ChatMessage" ],
     "shortName" : "chatMessage",
@@ -8304,6 +8707,12 @@ var vital_aimp_0_1_0_schema = {
     "shortName" : "chatMode",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasChatPromptTokenCount",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask" ],
+    "shortName" : "chatPromptTokenCount",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasChatRuleID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ChatRule" ],
@@ -8347,6 +8756,42 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasChatTaskDeltaTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask" ],
+    "shortName" : "chatTaskDeltaTime",
+    "multipleValues" : false,
+    "type" : "LongProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasChatTaskEndDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask" ],
+    "shortName" : "chatTaskEndDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasChatTaskStagesJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask" ],
+    "shortName" : "chatTaskStagesJSON",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasChatTaskStartDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask" ],
+    "shortName" : "chatTaskStartDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasChatTaskUpdateDateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask" ],
+    "shortName" : "chatTaskUpdateDateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasChatTotalTokenCount",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask" ],
+    "shortName" : "chatTotalTokenCount",
+    "multipleValues" : false,
+    "type" : "IntegerProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasChildChannelURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ChannelClosedMessage" ],
     "shortName" : "childChannelURI",
@@ -8384,7 +8829,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasColor",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Choice", "http://vital.ai/ontology/vital-aimp#Device", "http://vital.ai/ontology/vital-aimp#IFrameEndpoint" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Choice", "http://vital.ai/ontology/vital-aimp#Device", "http://vital.ai/ontology/vital-aimp#IFrameEndpoint", "http://vital.ai/ontology/vital-aimp#WebEndpoint", "http://vital.ai/ontology/vital-aimp#WebFrameEndpoint" ],
     "shortName" : "color",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -8564,13 +9009,13 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasDestinationAccountName",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer" ],
     "shortName" : "destinationAccountName",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasDestinationAccountURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer" ],
     "shortName" : "destinationAccountURI",
     "multipleValues" : false,
     "type" : "URIProperty"
@@ -8728,6 +9173,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasEmail",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Contact", "http://vital.ai/ontology/vital-aimp#EmailProfile", "http://vital.ai/ontology/vital-aimp#PermittedSender" ],
     "shortName" : "email",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasEncodedVoiceData",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessageContent" ],
+    "shortName" : "encodedVoiceData",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -8899,6 +9350,18 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasGeneratedAccumulatedText",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessageContent" ],
+    "shortName" : "generatedAccumulatedText",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasGeneratedText",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessageContent" ],
+    "shortName" : "generatedText",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasGenre",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Movie" ],
     "shortName" : "genre",
@@ -8906,7 +9369,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasGeoAPIJSON",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AIMPMessageContent" ],
     "shortName" : "geoAPIJSON",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -8948,7 +9411,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasGreetingText",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookEndpoint", "http://vital.ai/ontology/vital-aimp#IFrameEndpoint" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#FacebookEndpoint", "http://vital.ai/ontology/vital-aimp#IFrameEndpoint", "http://vital.ai/ontology/vital-aimp#WebEndpoint", "http://vital.ai/ontology/vital-aimp#WebFrameEndpoint" ],
     "shortName" : "greetingText",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -9094,6 +9557,60 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasJson",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentDatascriptCallRequest", "http://vital.ai/ontology/vital-aimp#AgentStatusRequest", "http://vital.ai/ontology/vital-aimp#AgentStatusResponse", "http://vital.ai/ontology/vital-aimp#StripePayment" ],
     "shortName" : "json",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasJweEncryptedString",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#JWTContainer" ],
+    "shortName" : "jweEncryptedString",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasJweKeyIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#JWEPubKey", "http://vital.ai/ontology/vital-aimp#JWTContainer" ],
+    "shortName" : "jweKeyIdentifier",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasJweProviderIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#JWEPubKey", "http://vital.ai/ontology/vital-aimp#JWTContainer" ],
+    "shortName" : "jweProviderIdentifier",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasJwePubKeyString",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#JWEPubKey" ],
+    "shortName" : "jwePubKeyString",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasJwtEncodedString",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#JWTContainer" ],
+    "shortName" : "jwtEncodedString",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasJwtJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#JWTContainer" ],
+    "shortName" : "jwtJSON",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasJwtKeyIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#JWTContainer", "http://vital.ai/ontology/vital-aimp#JWTPubKey" ],
+    "shortName" : "jwtKeyIdentifier",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasJwtProviderIdentifier",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital#Account", "http://vital.ai/ontology/vital-aimp#JWTContainer", "http://vital.ai/ontology/vital-aimp#JWTPubKey" ],
+    "shortName" : "jwtProviderIdentifier",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasJwtPubKeyString",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#JWTPubKey" ],
+    "shortName" : "jwtPubKeyString",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -9357,11 +9874,23 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasMessageAgentInstallURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AgentMessageContent", "http://vital.ai/ontology/vital-aimp#CallingAgentMessageContent", "http://vital.ai/ontology/vital-aimp#RespondingAgentMessageContent" ],
+    "shortName" : "messageAgentInstallURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasMessageClassURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessageDef", "http://vital.ai/ontology/vital-aimp#AgentInstanceMessageDeployment" ],
     "shortName" : "messageClassURI",
     "multipleValues" : false,
     "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasMessageContentJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessageContent" ],
+    "shortName" : "messageContentJSON",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasMessageID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#EmailMessage", "http://vital.ai/ontology/vital-aimp#EmailSummary", "http://vital.ai/ontology/vital-aimp#Sms", "http://vital.ai/ontology/vital-aimp#VoiceMessage" ],
@@ -9382,7 +9911,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasMessageURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#ChannelHistoryResponseMessage", "http://vital.ai/ontology/vital-aimp#GetChannelHistoryMessage", "http://vital.ai/ontology/vital-aimp#InvalidateMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask", "http://vital.ai/ontology/vital-aimp#ChannelHistoryResponseMessage", "http://vital.ai/ontology/vital-aimp#GetChannelHistoryMessage", "http://vital.ai/ontology/vital-aimp#InvalidateMessage" ],
     "shortName" : "messageURI",
     "multipleValues" : false,
     "type" : "URIProperty"
@@ -9898,7 +10427,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasRecipientIdentity",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer" ],
     "shortName" : "recipientIdentity",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -9948,6 +10477,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasReplyBridgeReferenceObjectURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#BridgeSessionMessage", "http://vital.ai/ontology/vital-aimp#InterruptProcessorMessage" ],
     "shortName" : "replyBridgeReferenceObjectURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasReplyChannelURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "shortName" : "replyChannelURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
@@ -10084,7 +10619,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "URIProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSenderIdentity",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer" ],
     "shortName" : "senderIdentity",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -10110,6 +10645,12 @@ var vital_aimp_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSerializedMessage",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer" ],
     "shortName" : "serializedMessage",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasServerSentEventJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#HaleyRealtimeMessage" ],
+    "shortName" : "serverSentEventJSON",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
@@ -10246,13 +10787,13 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSourceAccountName",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer" ],
     "shortName" : "sourceAccountName",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSourceAccountURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer" ],
     "shortName" : "sourceAccountURI",
     "multipleValues" : false,
     "type" : "URIProperty"
@@ -10293,6 +10834,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#hasSourceRequestURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AgentDatascriptCallResponse", "http://vital.ai/ontology/vital-aimp#AgentObject", "http://vital.ai/ontology/vital-aimp#AgentStatusResponse" ],
+    "shortName" : "sourceRequestURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSourceText",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#Translation" ],
     "shortName" : "sourceText",
@@ -10300,13 +10847,13 @@ var vital_aimp_0_1_0_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSourceUserID",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer" ],
     "shortName" : "sourceUserID",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasSourceUserName",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer" ],
     "shortName" : "sourceUserName",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -10498,7 +11045,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "IntegerProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#hasTimezone",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AIMPTask" ],
     "shortName" : "timezone",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -10816,8 +11363,14 @@ var vital_aimp_0_1_0_schema = {
     "type" : "BooleanProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isCustomerServiceEnabled",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#IFrameEndpoint" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#IFrameEndpoint", "http://vital.ai/ontology/vital-aimp#WebEndpoint", "http://vital.ai/ontology/vital-aimp#WebFrameEndpoint" ],
     "shortName" : "customerServiceEnabled",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isDaylightSavingsTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPTask" ],
+    "shortName" : "daylightSavingsTime",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
@@ -11067,6 +11620,12 @@ var vital_aimp_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-aimp#isJwtVerified",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#JWTContainer" ],
+    "shortName" : "jwtVerified",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isKeepChannelEntryText",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#DialogExitBot", "http://vital.ai/ontology/vital-aimp#DialogExitDialog" ],
     "shortName" : "keepChannelEntryText",
@@ -11128,7 +11687,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "BooleanProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isOpenInitially",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#IFrameEndpoint" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#IFrameEndpoint", "http://vital.ai/ontology/vital-aimp#WebEndpoint", "http://vital.ai/ontology/vital-aimp#WebFrameEndpoint" ],
     "shortName" : "openInitially",
     "multipleValues" : false,
     "type" : "BooleanProperty"
@@ -11230,7 +11789,7 @@ var vital_aimp_0_1_0_schema = {
     "type" : "BooleanProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-aimp#isReplyTo",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-aimp#AIMPMessage", "http://vital.ai/ontology/vital-aimp#AIMPMessageContainer" ],
     "shortName" : "replyTo",
     "multipleValues" : false,
     "type" : "URIProperty"

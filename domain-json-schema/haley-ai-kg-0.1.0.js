@@ -6,7 +6,7 @@ var haley_ai_kg_0_1_0_schema = {
   "domainURI" : "http://vital.ai/ontology/haley-ai-kg",
   "name" : "haley-ai-kg-0.1.0",
   "version" : "0.1.0",
-  "domainOWLHash" : "d4231bad16ee81e5673337eb9034b871",
+  "domainOWLHash" : "03b88b9662ecbe81a323b3d8c67721c2",
   "vitalsignsVersion" : "0.2.304",
   "parents" : [ "http://vital.ai/ontology/haley-ai-question" ],
   "schemas" : [ {
@@ -32,6 +32,21 @@ var haley_ai_kg_0_1_0_schema = {
   }, {
     "extends" : "http://vital.ai/ontology/vital-core#VITAL_Edge",
     "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGPurgeUpdateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSyncStatusURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSyncTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSyncUpdateTime" : {
+        "type" : "number"
+      },
       "http://vital.ai/ontology/haley-ai-kg#hasUnionDomainBooleanProperty" : {
         "type" : "boolean"
       },
@@ -58,8 +73,42 @@ var haley_ai_kg_0_1_0_schema = {
       }
     }
   }, {
+    "extends" : "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject",
+    "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGPurgeUpdateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSyncStatusURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSyncTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSyncUpdateTime" : {
+        "type" : "number"
+      }
+    }
+  }, {
     "extends" : "http://vital.ai/ontology/vital-core#VITAL_HyperEdge",
     "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGPurgeUpdateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSyncStatusURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSyncTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSyncUpdateTime" : {
+        "type" : "number"
+      },
       "http://vital.ai/ontology/haley-ai-kg#hasUnionDomainBooleanProperty" : {
         "type" : "boolean"
       },
@@ -88,6 +137,21 @@ var haley_ai_kg_0_1_0_schema = {
   }, {
     "extends" : "http://vital.ai/ontology/vital-core#VITAL_HyperNode",
     "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGPurgeUpdateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSyncStatusURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSyncTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSyncUpdateTime" : {
+        "type" : "number"
+      },
       "http://vital.ai/ontology/haley-ai-kg#hasUnionDomainBooleanProperty" : {
         "type" : "boolean"
       },
@@ -116,6 +180,21 @@ var haley_ai_kg_0_1_0_schema = {
   }, {
     "extends" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGPurgeUpdateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSyncStatusURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSyncTypeURI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGSyncUpdateTime" : {
+        "type" : "number"
+      },
       "http://vital.ai/ontology/haley-ai-kg#hasUnionDomainBooleanProperty" : {
         "type" : "boolean"
       },
@@ -383,9 +462,6 @@ var haley_ai_kg_0_1_0_schema = {
       "http://vital.ai/ontology/haley-ai-kg#hasKGGraphAssertionDateTime" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/haley-ai-kg#hasKGIdentifier" : {
         "type" : "string"
       },
@@ -399,6 +475,9 @@ var haley_ai_kg_0_1_0_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/haley-ai-kg#hasKGModelVersion" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGRefEdgeURI" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/haley-ai-kg#hasKGTenantIdentifier" : {
@@ -437,9 +516,6 @@ var haley_ai_kg_0_1_0_schema = {
     "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGDocument" ],
     "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGExtractTask" ],
     "properties" : {
-      "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/haley-ai-kg#hasKGIdentifier" : {
         "type" : "string"
       },
@@ -513,9 +589,6 @@ var haley_ai_kg_0_1_0_schema = {
     "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGIndexDocument" ],
     "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGIndexDocumentAttempt" ],
     "properties" : {
-      "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/haley-ai-kg#hasKGIdentifier" : {
         "type" : "string"
       },
@@ -529,9 +602,6 @@ var haley_ai_kg_0_1_0_schema = {
     "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGIndexDocument" ],
     "destinationDomains" : [ "http://vital.ai/ontology/haley-taxonomy#TaxonomyNode" ],
     "properties" : {
-      "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/haley-ai-kg#hasKGIdentifier" : {
         "type" : "string"
       },
@@ -545,9 +615,6 @@ var haley_ai_kg_0_1_0_schema = {
     "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGIndexDocument" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital#FileNode" ],
     "properties" : {
-      "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/haley-ai-kg#hasKGIdentifier" : {
         "type" : "string"
       },
@@ -603,9 +670,6 @@ var haley_ai_kg_0_1_0_schema = {
     "sourceDomains" : [ "http://vital.ai/ontology/vital-core#VITAL_Node" ],
     "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGNode" ],
     "properties" : {
-      "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/haley-ai-kg#hasKGIdentifier" : {
         "type" : "string"
       },
@@ -647,9 +711,6 @@ var haley_ai_kg_0_1_0_schema = {
     "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGPathElement" ],
     "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGPointer" ],
     "properties" : {
-      "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/haley-ai-kg#hasKGIdentifier" : {
         "type" : "string"
       },
@@ -712,9 +773,6 @@ var haley_ai_kg_0_1_0_schema = {
     "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGNode" ],
     "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGNode" ],
     "properties" : {
-      "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/haley-ai-kg#hasKGIdentifier" : {
         "type" : "string"
       },
@@ -864,9 +922,6 @@ var haley_ai_kg_0_1_0_schema = {
     "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGAgent" ],
     "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGTag" ],
     "properties" : {
-      "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/haley-ai-kg#hasKGIdentifier" : {
         "type" : "string"
       },
@@ -886,6 +941,13 @@ var haley_ai_kg_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge",
     "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGInteraction", "http://vital.ai/ontology/haley-ai-kg#KGRoom" ],
     "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGThread" ],
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGTool",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge",
+    "sourceDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGAgent" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/haley-ai-kg#KGTool" ],
     "properties" : {
     }
   }, {
@@ -2367,9 +2429,6 @@ var haley_ai_kg_0_1_0_schema = {
       "http://vital.ai/ontology/haley-ai-kg#hasKGGraphAssertionDateTime" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/haley-ai-kg#hasKGIdentifier" : {
         "type" : "string"
       },
@@ -2387,6 +2446,9 @@ var haley_ai_kg_0_1_0_schema = {
       },
       "http://vital.ai/ontology/haley-ai-kg#hasKGNodeCacheDateTime" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGRefURI" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/haley-ai-kg#hasKGTenantIdentifier" : {
         "type" : "string"
@@ -2522,6 +2584,9 @@ var haley_ai_kg_0_1_0_schema = {
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "properties" : {
       "http://vital.ai/ontology/haley-ai-kg#hasKGQueryIdentifier" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/haley-ai-kg#hasKGQueryJSON" : {
         "type" : "string"
       }
     }
@@ -2996,6 +3061,16 @@ var haley_ai_kg_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGSyncStatus",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGSyncType",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "properties" : {
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGTable",
     "parent" : "http://vital.ai/ontology/haley-ai-kg#KGNode",
     "properties" : {
@@ -3084,6 +3159,14 @@ var haley_ai_kg_0_1_0_schema = {
     "properties" : {
     }
   }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGTool",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#KGNode",
+    "properties" : {
+      "http://vital.ai/ontology/haley-ai-kg#hasKGToolType" : {
+        "type" : "string"
+      }
+    }
+  }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGToolRequest",
     "parent" : "http://vital.ai/ontology/haley-ai-kg#KGNode",
     "properties" : {
@@ -3106,6 +3189,11 @@ var haley_ai_kg_0_1_0_schema = {
     }
   }, {
     "id" : "http://vital.ai/ontology/haley-ai-kg#KGToolResultType",
+    "parent" : "http://vital.ai/ontology/haley-ai-kg#KGType",
+    "properties" : {
+    }
+  }, {
+    "id" : "http://vital.ai/ontology/haley-ai-kg#KGToolType",
     "parent" : "http://vital.ai/ontology/haley-ai-kg#KGType",
     "properties" : {
     }
@@ -4263,7 +4351,7 @@ var haley_ai_kg_0_1_0_schema = {
     "type" : "DateProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGGraphURI",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge", "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGExtractTask", "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGIndexDocumentAttempt", "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGIndexDocumentCategory", "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGIndexDocumentFileNode", "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGNode", "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGPointer", "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGRefEdge", "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGTag", "http://vital.ai/ontology/haley-ai-kg#KGNode" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
     "shortName" : "kGGraphURI",
     "multipleValues" : false,
     "type" : "URIProperty"
@@ -4490,6 +4578,12 @@ var haley_ai_kg_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGPurgeUpdateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "shortName" : "kGPurgeUpdateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGQueryBooleanValue",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGCriterion" ],
     "shortName" : "kGQueryBooleanValue",
@@ -4531,6 +4625,12 @@ var haley_ai_kg_0_1_0_schema = {
     "shortName" : "kGQueryIntegerValue",
     "multipleValues" : false,
     "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGQueryJSON",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGQuery" ],
+    "shortName" : "kGQueryJSON",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGQueryKGMetaType",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGCriterion", "http://vital.ai/ontology/haley-ai-kg#KGTypePath" ],
@@ -4787,6 +4887,18 @@ var haley_ai_kg_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGRatingValueURI",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGRating" ],
     "shortName" : "kGRatingValueURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGRefEdgeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#Edge_hasKGEdge" ],
+    "shortName" : "kGRefEdgeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGRefURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGNode" ],
+    "shortName" : "kGRefURI",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
@@ -5066,6 +5178,24 @@ var haley_ai_kg_0_1_0_schema = {
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGSyncStatusURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "shortName" : "kGSyncStatusURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGSyncTypeURI",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "shortName" : "kGSyncTypeURI",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGSyncUpdateTime",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-core#VITAL_Edge", "http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject", "http://vital.ai/ontology/vital-core#VITAL_HyperEdge", "http://vital.ai/ontology/vital-core#VITAL_HyperNode", "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+    "shortName" : "kGSyncUpdateTime",
+    "multipleValues" : false,
+    "type" : "DateProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGTagName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGTag" ],
     "shortName" : "kGTagName",
@@ -5123,6 +5253,12 @@ var haley_ai_kg_0_1_0_schema = {
     "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGToolResultType",
     "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGToolResult" ],
     "shortName" : "kGToolResultType",
+    "multipleValues" : false,
+    "type" : "URIProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/haley-ai-kg#hasKGToolType",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/haley-ai-kg#KGTool" ],
+    "shortName" : "kGToolType",
     "multipleValues" : false,
     "type" : "URIProperty"
   }, {
