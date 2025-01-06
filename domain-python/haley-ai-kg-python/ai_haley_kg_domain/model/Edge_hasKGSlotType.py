@@ -15,6 +15,7 @@ from ai_haley_kg_domain.model.Edge_hasKGEdge import Edge_hasKGEdge
 
 class Edge_hasKGSlotType(Edge_hasKGEdge):
     _allowed_properties = [
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGSlotRoleType', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGSlotTypeExternIdentifier', 'prop_class': StringProperty}, 
     ]
 

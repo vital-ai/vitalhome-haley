@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='vital-ai-haley-kg',
-    version='0.1.20',
+    version='0.1.23',
     author='Marc Hadfield',
     author_email='marc@vital.ai',
     description='VitalSigns haley kg domain',
@@ -21,6 +21,7 @@ setup(
     },
     license='Apache License 2.0',
     install_requires=[
+            'vital-ai-haley>=0.1.7',
             'vital-ai-haley-question>=0.1.6',
             'vital-ai-vitalsigns>=0.1.21'
         ],

@@ -10,18 +10,19 @@ from vital_ai_vitalsigns.model.properties.OtherProperty import OtherProperty
 from vital_ai_vitalsigns.model.properties.StringProperty import StringProperty
 from vital_ai_vitalsigns.model.properties.TruthProperty import TruthProperty
 from vital_ai_vitalsigns.model.properties.URIProperty import URIProperty
-from ai_haley_kg_domain.model.KGType import KGType
+from ai_haley_kg_domain.model.Edge_hasKGEdge import Edge_hasKGEdge
 
 
-class KGFileType(KGType):
+class Edge_hasKGFrameProtoType(Edge_hasKGEdge):
     _allowed_properties = [
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGEntityTypeExternIdentifier', 'prop_class': StringProperty}, 
     ]
 
     @classmethod
     def get_allowed_properties(cls):
-        return super().get_allowed_properties() + KGFileType._allowed_properties
+        return super().get_allowed_properties() + Edge_hasKGFrameProtoType._allowed_properties
 
     @classmethod
     def get_class_uri(cls) -> str:
-        return 'http://vital.ai/ontology/haley-ai-kg#KGFileType'
+        return 'http://vital.ai/ontology/haley-ai-kg#Edge_hasKGFrameProtoType'
 
