@@ -27,6 +27,7 @@ class KGNode(VITAL_Node):
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGModelVersion', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGNodeCacheDateTime', 'prop_class': DateTimeProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGRefURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGReferentURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGTenantIdentifier', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGValidTypeURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGVersion', 'prop_class': StringProperty}, 

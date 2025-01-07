@@ -1,9 +1,9 @@
 
 import datetime
-from vital_ai_vitalsigns.model.VITAL_Node import VITAL_Node
+from ai_haley_kg_domain.model.KGNode import KGNode
 
 
-class KGIdentifier(VITAL_Node):
+class KGIdentifier(KGNode):
         kGIdentifierEnclosingID: str
         kGIdentifierEnclosingURI: str
         kGIdentifierPrimaryID: str
@@ -11,5 +11,4 @@ class KGIdentifier(VITAL_Node):
         kGIdentifierSecondaryID: str
         kGIdentifierSecondaryURI: str
         kGIdentifierSourceURI: str
-        kGraphDescription: str
 

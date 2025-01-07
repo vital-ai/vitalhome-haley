@@ -10,10 +10,10 @@ from vital_ai_vitalsigns.model.properties.OtherProperty import OtherProperty
 from vital_ai_vitalsigns.model.properties.StringProperty import StringProperty
 from vital_ai_vitalsigns.model.properties.TruthProperty import TruthProperty
 from vital_ai_vitalsigns.model.properties.URIProperty import URIProperty
-from vital_ai_vitalsigns.model.VITAL_Node import VITAL_Node
+from ai_haley_kg_domain.model.KGNode import KGNode
 
 
-class KGIdentifier(VITAL_Node):
+class KGIdentifier(KGNode):
     _allowed_properties = [
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGIdentifierEnclosingID', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGIdentifierEnclosingURI', 'prop_class': URIProperty}, 
@@ -22,7 +22,6 @@ class KGIdentifier(VITAL_Node):
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGIdentifierSecondaryID', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGIdentifierSecondaryURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGIdentifierSourceURI', 'prop_class': URIProperty}, 
-        {'uri': 'http://vital.ai/ontology/haley-ai-kg#hasKGraphDescription', 'prop_class': StringProperty}, 
     ]
 
     @classmethod
