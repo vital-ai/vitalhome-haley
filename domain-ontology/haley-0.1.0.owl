@@ -169,6 +169,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/haley#HaleyAccessAccountRole"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/haley#HaleyAccessBotRole"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley#HaleyAccessGroupRole"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/haley#HaleyAccessLoginRole"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/haley#HaleyAccessOfficeRole"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/haley#HaleyAccessTeamRole"/>
@@ -288,6 +289,23 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital-core#Dataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasAccessRoleScopeGroupURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley#hasAccessRoleScopeGroupURI">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley#Edge_hasHaleyAccessAccountRole"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley#Edge_hasHaleyAccessBotRole"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/haley#Edge_hasHaleyAccessLoginRole"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley#HaleyAccountGroup"/>
     </owl:ObjectProperty>
     
 
@@ -451,6 +469,33 @@
     
 
 
+    <!-- http://vital.ai/ontology/haley#hasChannelOrgTypeURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley#hasChannelOrgTypeURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley#ChannelOrgType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasCloudCertificateStatusURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley#hasCloudCertificateStatusURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#CloudCertificate"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley#CloudCertificateStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasCloudCodePathTypeURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley#hasCloudCodePathTypeURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#CloudCodePath"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley#CloudCodePathType"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/haley#hasCommandProcessorNotificationChannelURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley#hasCommandProcessorNotificationChannelURI">
@@ -582,6 +627,26 @@
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley#hasGraphTypeURI">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#HaleyGraph"/>
         <rdfs:range rdf:resource="http://vital.ai/ontology/haley#HaleyGraphType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasGroupAccessURIs -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/haley#hasGroupAccessURIs">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#VITAL_Edge"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#VITAL_GraphContainerObject"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#VITAL_HyperEdge"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#VITAL_HyperNode"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/haley#HaleyAccountGroup"/>
+        <vital-core:hasMultipleValues rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vital-core:hasMultipleValues>
     </owl:ObjectProperty>
     
 
@@ -1795,6 +1860,24 @@ The session encryption key may be expired, in which case the API Key would be re
     
 
 
+    <!-- http://vital.ai/ontology/haley#hasAccountGroupExternalIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasAccountGroupExternalIdentifier">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountGroup"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasAccountGroupIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasAccountGroupIdentifier">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountGroup"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/haley#hasAccountOfficeExternalIdentifier -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasAccountOfficeExternalIdentifier">
@@ -1808,6 +1891,24 @@ The session encryption key may be expired, in which case the API Key would be re
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasAccountOfficeIdentifier">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountOffice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasAccountOrganizationExternalIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasAccountOrganizationExternalIdentifier">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountOrganization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasAccountOrganizationIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasAccountOrganizationIdentifier">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountOrganization"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1954,6 +2055,15 @@ The session encryption key may be expired, in which case the API Key would be re
     
 
 
+    <!-- http://vital.ai/ontology/haley#hasBucketPath -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasBucketPath">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#CloudBucket"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/haley#hasCentroidLatitude -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasCentroidLatitude">
@@ -1968,6 +2078,24 @@ The session encryption key may be expired, in which case the API Key would be re
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasCentroidLongitude">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#HaleyRegion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasCloudIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasCloudIdentifier">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasCodePath -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasCodePath">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#CloudCodePath"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -2207,6 +2335,71 @@ The session encryption key may be expired, in which case the API Key would be re
     
 
 
+    <!-- http://vital.ai/ontology/haley#hasDailyCostAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasDailyCostAmount">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#CloudAppActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>In cents, $1 is 100.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasDailyCostLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasDailyCostLimit">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#CloudAppLimits"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>In USD cents, i.e. $1 is 100.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasDailyRequestCount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasDailyRequestCount">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#CloudAppActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasDailyRequestGenerationLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasDailyRequestGenerationLimit">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#CloudAppLimits"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasDailyRequestInputCount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasDailyRequestInputCount">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#CloudAppActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasDailyRequestInputLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasDailyRequestInputLimit">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#CloudAppLimits"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasDailyRequestLimit -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasDailyRequestLimit">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#CloudAppLimits"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/haley#hasDateTimeAnswerBinding -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasDateTimeAnswerBinding">
@@ -2231,6 +2424,24 @@ The session encryption key may be expired, in which case the API Key would be re
         <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#HaleyTask"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
         <rdfs:comment>Number of milleseconds between runs of this task. Task implementation expected to use this value to schedule its next run.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasDeploymentMessage -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasDeploymentMessage">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#CloudDeploymentMessage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#hasDeploymentScriptCode -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/haley#hasDeploymentScriptCode">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/haley#CloudDeploymentScript"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -4104,6 +4315,209 @@ created, pending, in-progress, canceled, incomplete, failed, human-intervention,
     
 
 
+    <!-- http://vital.ai/ontology/haley#ChannelOrgType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#ChannelOrgType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudAgent -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudAgent">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#CloudApp"/>
+        <rdfs:comment>An app implementing an agent conforming to AgentContainer standard and AIMP Messaging, associated with an AgentInstance.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudApp -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudApp">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>A managed app.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudAppActivity -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudAppActivity">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudAppDeployment -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudAppDeployment">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>Associate a CloudApp with elements of a deployment which may include Endpoint, Channel, Bot or parameters to use with these that may affect message distribution, such as consumer pool size.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudAppLimits -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudAppLimits">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>Limits to be applied to a CloudApp, such as maximum parallel requests.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudBucket -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudBucket">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>Bucket containing assets, typically front end code, images, and styles.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudCertificate -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudCertificate">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>A SSL/TLS certificate associated with domain name and content distribution.  For a hosted zone case this can be issued immediately, but for an externally managed domain this may need an extra validation step.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudCertificateStatus -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudCertificateStatus">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudCluster -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudCluster">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>A cluster running a service.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudCodePath -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudCodePath">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>Path within a Code Repo to identify directory for front end code, container for backend code, or container for agent implementation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudCodePathType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudCodePathType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudCodeRepo -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudCodeRepo">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>Code repository associated with an authorization such as GitHub Authorization.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudContainer -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudContainer">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>A specific container managed within a ContainerRepo and to be deployed as a CloudTask.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudContainerRepo -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudContainerRepo">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>Container repository of container to be deployed as a CloudTask.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudContentDistribution -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudContentDistribution">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>A CDN distribution associated with a Bucket for source and a domain name for public access.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudDeploymentMessage -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudDeploymentMessage">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>Message returned by a deployment process, which may contain details of a success or an error.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudDeploymentScript -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudDeploymentScript">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>Deployment script to use in deployment processes such as GitHub Actions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudDomainName -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudDomainName">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>A domain name to allow access to a resource.  For front end and back end, these would be publicly accessible.  For an agent, this is only accessible within a security group specific to that agent or a security group with access to that agent security group.  Domain name must be within a managed zone or have a certificate validated via DNS.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudLoadBalancer -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudLoadBalancer">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>A load balancer in front of a cluster.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudService -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudService">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>A service running a Task.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudTask -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudTask">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyCloud"/>
+        <rdfs:comment>A task implemented by a CloudContainer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudWebApp -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#CloudWebApp">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#CloudApp"/>
+        <rdfs:comment>A managed webapp composed of front end assets within a content distribution and/or back end deployed using a load balancer.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/haley#Customer -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley#Customer">
@@ -4130,6 +4544,61 @@ created, pending, in-progress, canceled, incomplete, failed, human-intervention,
     
 
 
+    <!-- http://vital.ai/ontology/haley#Edge_hasChannelDistribution -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#Edge_hasChannelDistribution">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountGroup"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountOffice"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountOrganization"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountTeam"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital#Login"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstall"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Channel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#Edge_hasCloudAppActivity -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#Edge_hasCloudAppActivity">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#CloudAppActivity"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#CloudApp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#Edge_hasCloudAppDeployment -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#Edge_hasCloudAppDeployment">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#CloudAppDeployment"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#CloudApp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#Edge_hasCloudAppLimits -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#Edge_hasCloudAppLimits">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#CloudAppLimits"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#CloudApp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#Edge_hasCloudCodeRepo -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#Edge_hasCloudCodeRepo">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#CloudCodeRepo"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#GithubAuthorization"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/haley#Edge_hasHaleyAccessAccountRole -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley#Edge_hasHaleyAccessAccountRole">
@@ -4147,6 +4616,26 @@ created, pending, in-progress, canceled, incomplete, failed, human-intervention,
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccessBotRole"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-aimp#Bot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#Edge_hasHaleyAccessGroupPolicy -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#Edge_hasHaleyAccessGroupPolicy">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccessGroupPolicy"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#Edge_hasHaleyAccessGroupRole -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#Edge_hasHaleyAccessGroupRole">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccessGroupRole"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountGroup"/>
     </owl:Class>
     
 
@@ -4200,6 +4689,7 @@ created, pending, in-progress, canceled, incomplete, failed, human-intervention,
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccessRight"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccessAccountRole"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccessBotRole"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccessGroupRole"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccessLoginRole"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccessOfficeRole"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccessTeamRole"/>
@@ -4268,11 +4758,35 @@ created, pending, in-progress, canceled, incomplete, failed, human-intervention,
     
 
 
+    <!-- http://vital.ai/ontology/haley#Edge_hasHaleyAccountGroup -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#Edge_hasHaleyAccountGroup">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountGroup"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountGroup"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountOrganization"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#Edge_hasHaleyAccountGroupMember -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#Edge_hasHaleyAccountGroupMember">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital#Login"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstall"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountGroup"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/haley#Edge_hasHaleyAccountOffice -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley#Edge_hasHaleyAccountOffice">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountOffice"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountGroup"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
     </owl:Class>
     
@@ -4293,7 +4807,18 @@ created, pending, in-progress, canceled, incomplete, failed, human-intervention,
     <owl:Class rdf:about="http://vital.ai/ontology/haley#Edge_hasHaleyAccountOfficeMember">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital#Login"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstall"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountOffice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#Edge_hasHaleyAccountOrganization -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#Edge_hasHaleyAccountOrganization">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountOrganization"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
     </owl:Class>
     
 
@@ -4303,6 +4828,7 @@ created, pending, in-progress, canceled, incomplete, failed, human-intervention,
     <owl:Class rdf:about="http://vital.ai/ontology/haley#Edge_hasHaleyAccountTeam">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountTeam"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountGroup"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountOffice"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
     </owl:Class>
@@ -4314,6 +4840,7 @@ created, pending, in-progress, canceled, incomplete, failed, human-intervention,
     <owl:Class rdf:about="http://vital.ai/ontology/haley#Edge_hasHaleyAccountTeamMember">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_PeerEdge"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital#Login"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstall"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/haley#HaleyAccountTeam"/>
     </owl:Class>
     
@@ -4715,6 +5242,22 @@ created, pending, in-progress, canceled, incomplete, failed, human-intervention,
     
 
 
+    <!-- http://vital.ai/ontology/haley#HaleyAccessGroupPolicy -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#HaleyAccessGroupPolicy">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyAccessPolicy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#HaleyAccessGroupRole -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#HaleyAccessGroupRole">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/haley#HaleyAccessLoginPolicyRule -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley#HaleyAccessLoginPolicyRule">
@@ -4925,6 +5468,14 @@ created, pending, in-progress, canceled, incomplete, failed, human-intervention,
     
 
 
+    <!-- http://vital.ai/ontology/haley#HaleyAccountGroup -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#HaleyAccountGroup">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/haley#HaleyAccountOffice -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley#HaleyAccountOffice">
@@ -4936,6 +5487,14 @@ created, pending, in-progress, canceled, incomplete, failed, human-intervention,
     <!-- http://vital.ai/ontology/haley#HaleyAccountOfficeLocation -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley#HaleyAccountOfficeLocation">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#HaleyAccountOrganization -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#HaleyAccountOrganization">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
     </owl:Class>
     
@@ -5018,6 +5577,15 @@ created, pending, in-progress, canceled, incomplete, failed, human-intervention,
 
     <owl:Class rdf:about="http://vital.ai/ontology/haley#HaleyCity">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#HaleyCloud -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/haley#HaleyCloud">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+        <rdfs:comment>Node for Cloud Infrastructure</rdfs:comment>
     </owl:Class>
     
 
@@ -6436,6 +7004,142 @@ created, pending, in-progress, canceled, incomplete, failed, human-intervention,
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://vital.ai/ontology/haley#ChannelOrgType_ADHOC_TEAM -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#ChannelOrgType_ADHOC_TEAM">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#ChannelOrgType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#ChannelOrgType_AGENT_AGENT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#ChannelOrgType_AGENT_AGENT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#ChannelOrgType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#ChannelOrgType_GROUP -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#ChannelOrgType_GROUP">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#ChannelOrgType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#ChannelOrgType_LOGIN_AGENT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#ChannelOrgType_LOGIN_AGENT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#ChannelOrgType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#ChannelOrgType_LOGIN_LOGIN -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#ChannelOrgType_LOGIN_LOGIN">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#ChannelOrgType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#ChannelOrgType_NONE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#ChannelOrgType_NONE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#ChannelOrgType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#ChannelOrgType_OFFICE -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#ChannelOrgType_OFFICE">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#ChannelOrgType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#ChannelOrgType_OFFICE_LOCATION -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#ChannelOrgType_OFFICE_LOCATION">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#ChannelOrgType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#ChannelOrgType_ORGANIZATION_ACCOUNT -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#ChannelOrgType_ORGANIZATION_ACCOUNT">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#ChannelOrgType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#ChannelOrgType_ORGANIZATION_GLOBAL -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#ChannelOrgType_ORGANIZATION_GLOBAL">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#ChannelOrgType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#ChannelOrgType_TEAM -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#ChannelOrgType_TEAM">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#ChannelOrgType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudCertificateStatus_EXPIRED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#CloudCertificateStatus_EXPIRED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#CloudCertificateStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudCertificateStatus_FAILED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#CloudCertificateStatus_FAILED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#CloudCertificateStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudCertificateStatus_ISSUED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#CloudCertificateStatus_ISSUED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#CloudCertificateStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudCertificateStatus_PENDING -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#CloudCertificateStatus_PENDING">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#CloudCertificateStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudCodePathType_DOCKER_CONTAINER -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#CloudCodePathType_DOCKER_CONTAINER">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#CloudCodePathType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/haley#CloudCodePathType_FRONT_END -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/haley#CloudCodePathType_FRONT_END">
+        <rdf:type rdf:resource="http://vital.ai/ontology/haley#CloudCodePathType"/>
+    </owl:NamedIndividual>
     
 
 
