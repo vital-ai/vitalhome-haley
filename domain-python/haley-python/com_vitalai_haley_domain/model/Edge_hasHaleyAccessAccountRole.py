@@ -19,6 +19,7 @@ class Edge_hasHaleyAccessAccountRole(VITAL_PeerEdge):
         {'uri': 'http://vital.ai/ontology/haley#hasAccessRoleScopeBotURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley#hasAccessRoleScopeChannelURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley#hasAccessRoleScopeDatasetURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/haley#hasAccessRoleScopeGroupURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley#hasAccessRoleScopeLoginURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley#hasAccessRoleScopeOfficeURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/haley#hasAccessRoleScopeTeamURI', 'prop_class': URIProperty}, 

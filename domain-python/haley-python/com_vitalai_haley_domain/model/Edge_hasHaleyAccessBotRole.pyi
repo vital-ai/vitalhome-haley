@@ -8,6 +8,7 @@ class Edge_hasHaleyAccessBotRole(VITAL_PeerEdge):
         accessRoleScopeBotURI: str
         accessRoleScopeChannelURI: str
         accessRoleScopeDatasetURI: str
+        accessRoleScopeGroupURI: str
         accessRoleScopeLoginURI: str
         accessRoleScopeOfficeURI: str
         accessRoleScopeTeamURI: str
